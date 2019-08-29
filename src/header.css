@@ -2,18 +2,29 @@ header {
     top: 0;
     left: 0;
     position: static;
-  }
-  
+    width: 100%;
+    height: 400px;
+    background-image: url(./IMG_2342.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 h1 {
     padding: 0.2em 0.5em;/*上下 左右の余白*/
     color: #494949;/*文字色*/
     background: transparent;/*背景透明に*/
-    border-left: solid 10px #7db4e6;/*左線*/
     font-family: "fantasy", fantasy;
     size: 30px;
     float: left
 }
 
+.down {
+    text-align: center;
+    width: 100%;
+    position: relative;
+    height: 30px;
+    color: #555555;
+  }
 
 /* メニュー全体のスタイル */
 .global-nav {
@@ -32,6 +43,7 @@ h1 {
     size: 25px;
     font-family: "fantasy", fantasy;
     padding: 3px;
+    margin: 3px;
 }
 
 .global-nav h2 a:hover{
