@@ -10,12 +10,13 @@
         <link rel="stylesheet" type="text/css" href="src/section.css" />
         <link rel="stylesheet" type="text/css" href="src/menu.css" />
         <link rel="stylesheet" type="text/css" href="src/pict.css" />
+        <link rel="stylesheet" type="text/css" href="src/contact_box.css" />
         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     </head>
     
     <body>
         <header>
-            <h1>Miyawaki Shumpei</h1>
+            <h1 class="miyawaki">Miyawaki Shumpei</h1>
             <nav class="global-nav">
                 <span>
                     <h2><a href="#BLOG">BLOG</a></h2>
@@ -25,6 +26,8 @@
                     <!--　<span class="global-nav--bar"></span> -->
                 </span>
             </nav>
+            <h1 class="portfolio">PORTFOLIO</h1>
+            <h3 class="interest">#NLP #Computer Science</h3>
             <a href="#"><i class="fas fa-chevron-down fa-2x down"></i></a>
         </header>
 
@@ -32,16 +35,18 @@
             <a href="https://twitter.com/catshun_"><i class="fab fa-twitter fa-lg twitter"></i></a>
             <a href="https://www.facebook.com/shumpei.miyawaki"><i class="fab fa-facebook-square fa-lg facebook"></i></a>
             <a href="https://www.instagram.com/shumpeimiyawaki/?hl=ja"><i class="fab fa-instagram fa-lg instagram"></i></a>
-            <span class="date">最終更新日 2019.08.30</span>
         </span>
 
         <section>
             <article>
+                <p class="date">最終更新日 2019.08.30</p>
                 <a name="ABOUT"></a>
                 <h2 class="subject">ABOUT</h2>
-                <p class="about">東北大学 工学部 電気情報物理工学科 4年</p>
-                <p class="about">自然言語処理学 <a href="https://www.nlp.ecei.tohoku.ac.jp/">乾・鈴木研究室</a> 所属</p>
-
+                <p class="about"><i class="fas fa-graduation-cap"></i> 東北大学 工学部 電気情報物理工学科 4年</p>
+                <p class="about"><i class="fas fa-pencil-alt"></i> 自然言語処理学 <a href="https://www.nlp.ecei.tohoku.ac.jp/">乾・鈴木研究室</a> 所属</p>
+                <p class="about"><i class="fas fa-laptop-code"> </i> pytorch, C, HTML</p>
+                <p class="about"><i class="fas fa-music"></i> SEKAI NO OWARI, go!go!vanillas, LUCKYTAPES</p>
+                <p class="about"><i class="fas fa-futbol"></i> volleyball, soccer, camping, skiing</p>
                 <a name="PROJECT"></a>
                 <h2 class="subject" name="PROJECT">PROJECT</h2>
                 <figure class="my-figure">
@@ -55,7 +60,8 @@
                 </figure>
 
                 <a name="BLOG"></a>
-                <h2 class="subject">BLOG</h2>
+                <h2 href="#" vclass="subject">BLOG</h2>
+                <!--
                 <figure class="my-figure">
                     <img src="src/ggm.jpg" alt="sample83">
                         <figcaption>
@@ -63,19 +69,50 @@
                             <p>go!go!vanillas ファンクラブミーティング</p><i class="ion-ios-arrow-right"></i>
                         </figcaption>
                         <a href="#" class="btn"></a>
-                    </figure>
+                </figure>
+                -->
+                <a class="img-blog">
+                    <span class="nomal">
+                        <p>go!go!meeting</p>
+                        <p>仙台編</p>
+                    </span>
+                </a>
             </article>
         </section>
 
+        <h2 class="subject"> CONTACT</h2>
+        <div class="container">
+            <form action="action_page.php">
+                
+                <div>
+                    <input type="text" id="fname" name="firstname" placeholder="NAME">
+                </div>
+
+                <div>
+                    <input type="text" id="adress" name="adress" placeholder="ADRESS">
+                </div>
+                <!--
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+                </select>
+                -->
+                
+                <div>
+                    <textarea id="mail-subject" name="mail-subject" placeholder="MESSAGE" style="height:200px"></textarea>
+                </div>
+
+                <div>
+                    <a href="#" class="send">
+                        <i class="fas fa-paw fa-3x" type="submit" value="SEND"></i>
+                    </a>
+                    <!--<input type="submit" value="SEND">-->
+                </div>
+            </form>
+        </div>
 
 
-        <footer>
-            <!--<i class="fab fa-github"></i>-->
-            <i1 class="fas fa-phone"></i1>
-            <p1>080-8430-4214</p1>
-            <i1 class="far fa-envelope"></i1>
-            <p1>lab.skow.mywk@gmail.com</p1>
-            <address>自然言語処理学 乾・鈴木研究室</address>
-        </footer>
     </body>
     </html>
