@@ -1,0 +1,24 @@
+.subject  {
+    position: relative;/*相対位置*/
+    padding-left: 1.2em;/*アイコン分のスペース*/
+    line-height: 1.4;/*行高*/
+    color: #7b6459;/*文字色*/
+  }
+  
+.subject:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f1b0";/*アイコンのユニコード*/
+    position: absolute;/*絶対位置*/
+    font-size: 1em;/*サイズ*/
+    left: 0;/*アイコンの位置*/
+    top: 0;/*アイコンの位置*/
+    color: #000000; /*アイコン色*/
+}
+
+.about{
+    position: relative;/*相対位置*/
+    line-height: 1.4;/*行高*/
+    color: #000000;/*文字色*/
+    size: 20px;
+    left: 10px;
+}
