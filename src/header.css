@@ -21,7 +21,9 @@ header {
 .portfolio {
     size: 60px;
     font-family: "fantasy", fantasy;
-    float: left;
+    position: relative;
+    left: 0;
+    top: 10px;
     text-align: left;
     color: #494949;
     margin: 1em 0.5em;
@@ -30,7 +32,9 @@ header {
 .interest {
     size: 20px;
     font-family: "fantasy", fantasy;
-    float: left;
+    position: relative;
+    left: 5px;
+    text-align: left;
     color: #494949;
     padding: 0.2em 0.5em;
 }
@@ -39,7 +43,7 @@ header {
     text-align: center;
     width: 100%;
     position: relative;
-    height: 30px;
+    top: 200px;
     color: #555555;
   }
 

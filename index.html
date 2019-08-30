@@ -11,6 +11,7 @@
         <link rel="stylesheet" type="text/css" href="src/menu.css" />
         <link rel="stylesheet" type="text/css" href="src/pict.css" />
         <link rel="stylesheet" type="text/css" href="src/contact_box.css" />
+        <script src="/src/scroll.js"></script>
         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     </head>
     
@@ -26,12 +27,12 @@
                     <!--　<span class="global-nav--bar"></span> -->
                 </span>
             </nav>
-            <h1 class="portfolio">PORTFOLIO</h1>
+            <!--<h1 class="portfolio">PORTFOLIO</h1>-->
             <h3 class="interest">#NLP #Computer Science</h3>
-            <a href="#"><i class="fas fa-chevron-down fa-2x down"></i></a>
+            <a id="move_target" href="#target_point"><i class="fas fa-chevron-down fa-2x down"></i></a>
         </header>
 
-        <span class="icon">
+        <span class="icon" id="target_point">
             <a href="https://twitter.com/catshun_"><i class="fab fa-twitter fa-lg twitter"></i></a>
             <a href="https://www.facebook.com/shumpei.miyawaki"><i class="fab fa-facebook-square fa-lg facebook"></i></a>
             <a href="https://www.instagram.com/shumpeimiyawaki/?hl=ja"><i class="fab fa-instagram fa-lg instagram"></i></a>
@@ -45,7 +46,7 @@
                 <p class="about"><i class="fas fa-graduation-cap"></i> 東北大学 工学部 電気情報物理工学科 4年</p>
                 <p class="about"><i class="fas fa-pencil-alt"></i> 自然言語処理学 <a href="https://www.nlp.ecei.tohoku.ac.jp/">乾・鈴木研究室</a> 所属</p>
                 <p class="about"><i class="fas fa-laptop-code"> </i> pytorch, C, HTML</p>
-                <p class="about"><i class="fas fa-music"></i> SEKAI NO OWARI, go!go!vanillas, LUCKYTAPES</p>
+                <p class="about"><i class="fas fa-music"></i> SEKAI NO OWARI, go!go!vanillas, LUCKYTAPES, King Gnu</p>
                 <p class="about"><i class="fas fa-futbol"></i> volleyball, soccer, camping, skiing</p>
                 <a name="PROJECT"></a>
                 <h2 class="subject" name="PROJECT">PROJECT</h2>
@@ -56,7 +57,7 @@
                         <p>NLP若手の会第14回シンポジウム</p>
                         <p>（YANS 2019）札幌, August 2019</p>
                     </figcaption>
-                    <a href="#" class="btn"></a>
+                    <a href="https://drive.google.com/file/d/1Sg3vIrE_kxbyBGAR-4UCj3ii3keyK_EM/view" class="btn"></a>
                 </figure>
 
                 <a name="BLOG"></a>
@@ -71,8 +72,8 @@
                         <a href="#" class="btn"></a>
                 </figure>
                 -->
-                <a class="img-blog">
-                    <span class="nomal">
+                <a href="https://gogovanillas.com/feature/entry" class="img-blog">
+                    <span class="normal">
                         <p>go!go!meeting</p>
                         <p>仙台編</p>
                     </span>
@@ -82,34 +83,29 @@
 
         <h2 class="subject"> CONTACT</h2>
         <div class="container">
-            <form action="action_page.php">
+            <form action="src/mailto.php"　method="post">
                 
+                <!--名前-->
                 <div>
-                    <input type="text" id="fname" name="firstname" placeholder="NAME">
+                    <input type="text" id="name" name="name" placeholder="NAME">
                 </div>
 
+                <!--アドレス-->
                 <div>
                     <input type="text" id="adress" name="adress" placeholder="ADRESS">
                 </div>
-                <!--
-                <label for="country">Country</label>
-                <select id="country" name="country">
-                <option value="australia">Australia</option>
-                <option value="canada">Canada</option>
-                <option value="usa">USA</option>
-                </select>
-                -->
                 
+                <!--本文-->
                 <div>
                     <textarea id="mail-subject" name="mail-subject" placeholder="MESSAGE" style="height:200px"></textarea>
                 </div>
 
                 <div>
-                    <a href="#" class="send">
-                        <i class="fas fa-paw fa-3x" type="submit" value="SEND"></i>
-                    </a>
-                    <!--<input type="submit" value="SEND">-->
+                    <a href="#" class="send"></a>
+                    <input type="submit" value="SEND">
                 </div>
+
+                
             </form>
         </div>
 
