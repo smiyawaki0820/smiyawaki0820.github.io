@@ -87,6 +87,10 @@ input, select, textarea {
 	appearance: none;
 }
 
+.mail_address {
+	position: relative;
+	text-align: center;
+}
 .portfolio {
 	font-family: 'Satisfy', cursive; 
 	font-size: 48px;
