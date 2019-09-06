@@ -1,114 +1,179 @@
-    <!doctype html>
-    <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <title>宮脇峻平 | Miyawaki Shumpei</title>
-        <link href="css/reset.css" rel="stylesheet" type="text/css">
-        <link href="css/css.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" type="text/css" href="src/main.css" />
-        <link rel="stylesheet" type="text/css" href="src/header.css" />
-        <link rel="stylesheet" type="text/css" href="src/section.css" />
-        <link rel="stylesheet" type="text/css" href="src/menu.css" />
-        <link rel="stylesheet" type="text/css" href="src/pict.css" />
-        <link rel="stylesheet" type="text/css" href="src/contact_box.css" />
-        <script src="/src/scroll.js"></script>
-        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    </head>
-    
-    <body>
-        <header>
-            <h1 class="miyawaki">Miyawaki Shumpei</h1>
-            <nav class="global-nav">
-                <span>
-                    <h2><a href="#BLOG">BLOG</a></h2>
-                    <h2><a href="#PROJECT">PROJECT</a></h2>
-                    <h2><a href="#ABOUT">ABOUT</a></h2>
-                    <h2 class="current"><a href="#TOP">TOP</a></h2>
-                    <!--　<span class="global-nav--bar"></span> -->
-                </span>
-            </nav>
-            <!--<h1 class="portfolio">PORTFOLIO</h1>-->
-            <h3 class="interest">#NLP #Computer Science</h3>
-            <a id="move_target" href="#target_point"><i class="fas fa-chevron-down fa-2x down"></i></a>
-        </header>
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Miyawaki Shumpei| 宮脇峻平</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
 
-        <span class="icon" id="target_point">
-            <a href="https://twitter.com/catshun_"><i class="fab fa-twitter fa-lg twitter"></i></a>
-            <a href="https://www.facebook.com/shumpei.miyawaki"><i class="fab fa-facebook-square fa-lg facebook"></i></a>
-            <a href="https://www.instagram.com/shumpeimiyawaki/?hl=ja"><i class="fab fa-instagram fa-lg instagram"></i></a>
-        </span>
+		<!-- Header -->v
+			<div id="header">
 
-        <section>
-            <article>
-                <p class="date">最終更新日 2019.08.30</p>
-                <a name="ABOUT"></a>
-                <h2 class="subject">ABOUT</h2>
-                <p class="about"><i class="fas fa-graduation-cap"></i> 東北大学 工学部 電気情報物理工学科 4年</p>
-                <p class="about"><i class="fas fa-pencil-alt"></i> 自然言語処理学 <a href="https://www.nlp.ecei.tohoku.ac.jp/">乾・鈴木研究室</a> 所属</p>
-                <p class="about"><i class="fas fa-laptop-code"> </i> pytorch, C, HTML</p>
-                <p class="about"><i class="fas fa-music"></i> SEKAI NO OWARI, go!go!vanillas, LUCKYTAPES, King Gnu</p>
-                <p class="about"><i class="fas fa-futbol"></i> volleyball, soccer, camping, skiing</p>
-                <a name="PROJECT"></a>
-                <h2 class="subject" name="PROJECT">PROJECT</h2>
-                <figure class="my-figure">
-                    <img src="src/AR_abst.png" alt="sample83">
-                    <figcaption>
-                        <h4>日本語述語項構造解析のための自己回帰モデル</h4>
-                        <p>NLP若手の会第14回シンポジウム</p>
-                        <p>（YANS 2019）札幌, August 2019</p>
-                    </figcaption>
-                    <a href="https://drive.google.com/file/d/1Sg3vIrE_kxbyBGAR-4UCj3ii3keyK_EM/view" class="btn"></a>
-                </figure>
+				<div class="top">
 
-                <a name="BLOG"></a>
-                <h2 href="#" vclass="subject">BLOG</h2>
-                <!--
-                <figure class="my-figure">
-                    <img src="src/ggm.jpg" alt="sample83">
-                        <figcaption>
-                            <h4>go!go!meeting</h4>
-                            <p>go!go!vanillas ファンクラブミーティング</p><i class="ion-ios-arrow-right"></i>
-                        </figcaption>
-                        <a href="#" class="btn"></a>
-                </figure>
-                -->
-                <a href="https://gogovanillas.com/feature/entry" class="img-blog">
-                    <span class="normal">
-                        <p>go!go!meeting</p>
-                        <p>仙台編</p>
-                    </span>
-                </a>
-            </article>
-        </section>
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="images/harinezumi_home.jpg" alt="" /></span>
+							<h1 id="title">MIYAWAKI SHUMPEI</h1>
+							<p>Tohoku University</p>
+						</div>
 
-        <h2 class="subject"> CONTACT</h2>
-        <div class="container">
-            <form action="src/mailto.php"　method="post">
-                
-                <!--名前-->
-                <div>
-                    <input type="text" id="name" name="name" placeholder="NAME">
-                </div>
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
+								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+							</ul>
+						</nav>
 
-                <!--アドレス-->
-                <div>
-                    <input type="text" id="adress" name="adress" placeholder="ADRESS">
-                </div>
-                
-                <!--本文-->
-                <div>
-                    <textarea id="mail-subject" name="mail-subject" placeholder="MESSAGE" style="height:200px"></textarea>
-                </div>
+				</div>
 
-                <div>
-                    <a href="#" class="send"></a>
-                    <input type="submit" value="SEND">
-                </div>
+				<div class="bottom">
 
-                
-            </form>
-        </div>
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://twitter.com/catshun_" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.facebook.com/shumpei.miyawaki?ref=bookmarks" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="https://github.com/smiwayaki0820" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="https://www.instagram.com/shumpeimiyawaki/?hl=ja"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
 
+				</div>
 
-    </body>
-    </html>
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+							<header class="head_portfolio">
+								<h2 class="portfolio"><font size="">Portfolio</font></h2>
+								<h3 class="name">MIYAWAKI SHUMPEI</h3>
+								<h4 class="interest"><font size="5">#NLP #Machine Learning</font><br /></h4>
+							</header>
+
+							<footer>
+								<a href="#portfolio" class="down_button scrolly"><i class="fas fa-chevron-down fa-2x"></i></a>
+							</footer>
+
+						</div>
+					</section>
+
+				<!-- Portfolio -->
+					<section id="portfolio" class="two">
+						<div class="container">
+
+							<header>
+								<h2><font size="6">ABOUT ME</font></h2>
+							</header>
+
+							<p>
+								I'm in the 4th year of a Bachelor's student at <a href="https://www.tohoku.ac.jp/japanese/">Tohoku University</a>, <br />
+								and currently study "Natural Language Processing" in <a href="https://www.nlp.ecei.tohoku.ac.jp/">Inui Lab</a><br />
+							</p>
+
+							<div class="row">
+								<div class="col-4 col-12-mobile">
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/harinezumi_2.jpg" alt="" /></a>
+										<header>
+											<h3>ABOUT ME</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/harinezumi_mac.jpg" alt="" /></a>
+										<header>
+											<h3>PROJECT</h3>
+										</header>
+									</article>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+				<!--
+					<section id="about" class="three">
+						<div class="container">
+
+							<header>
+								<h2>About Me</h2>
+							</header>
+
+							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
+
+							<p>Tincidunt eu elit diam magnis pretium accumsan etiam id urna. Ridiculus
+							ultricies curae quis et rhoncus velit. Lobortis elementum aliquet nec vitae
+							laoreet eget cubilia quam non etiam odio tincidunt montes. Elementum sem
+							parturient nulla quam placerat viverra mauris non cum elit tempus ullamcorper
+							dolor. Libero rutrum ut lacinia donec curae mus vel quisque sociis nec
+							ornare iaculis.</p>
+
+						</div>
+					</section>
+				-->
+
+				<!-- Contact -->
+					<section id="contact" class="four">
+						<div class="container">
+
+							<header>
+								<h2><font size="6">Contact</font></h2>
+							</header>
+
+							<!-- method:フォームで入力したデータをどのように送信するかを設定 -->
+							<!-- action:フォームで入力したデータを処理するプログラムを指定 -->
+							<form method="post" action="contact.php">
+								<div class="row">
+									<!-- input:テキストフィールド, type"text":1行フィールド, name:プログラムに渡す名前 -->
+									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
+									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
+									<div class="col-12">
+										<textarea name="message" placeholder="Message"></textarea>
+									</div>
+									<div class="col-12">
+										<!-- 送信ボタン -->
+										<input type="submit" value="Send Message" />
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
