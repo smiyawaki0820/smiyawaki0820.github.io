@@ -115,6 +115,9 @@ input, select, textarea {
 	left: 7em;
 }
 
+.aboutme {
+	background-image: url("/images/harinezumi_osero.jpg")
+}
 /* Basic */
 
 	html {

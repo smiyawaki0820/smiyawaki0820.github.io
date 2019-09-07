@@ -1,0 +1,112 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,700);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+figure.my-figure {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  color: #ffffff;
+  text-align: left;
+  font-size: 16px;
+  background-color:#EEEEEE;
+}
+figure.my-figure * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+figure.my-figure img {
+  max-width: 100%;
+  backface-visibility: hidden;
+  vertical-align: top;
+}
+figure.my-figure:after,
+figure.my-figure figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+figure.my-figure:after {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.637);
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  opacity: 0;
+}
+figure.my-figure figcaption {
+  z-index: 1;
+  padding: 40px;
+}
+figure.my-figure h4,
+figure.my-figure .links {
+  width: 100%;
+  margin: 5px 0;
+  padding: 0;
+}
+figure.my-figure h4 {
+  line-height: 1.1em;
+  font-weight: 700;
+  font-size: 1em;
+  text-transform: uppercase;
+  opacity: 0;
+}
+figure.my-figure p {
+  font-size: 0.8em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  opacity: 0;
+  top: 50%;
+  -webkit-transform: translateY(40px);
+  transform: translateY(40px);
+}
+figure.my-figure i {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 20px 25px;
+  font-size: 34px;
+  opacity: 0;
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+}
+figure.my-figure a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+figure.my-figure:hover img,
+figure.my-figure.hover img {
+  zoom: 1;
+  filter: alpha(opacity=50);
+  -webkit-opacity: 0.5;
+  opacity: 0.5;
+}
+figure.my-figure:hover:after,
+figure.my-figure.hover:after {
+  opacity: 1;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+figure.my-figure:hover h4,
+figure.my-figure.hover h4,
+figure.my-figure:hover p,
+figure.my-figure.hover p,
+figure.my-figure:hover i,
+figure.my-figure.hover i {
+  -webkit-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  opacity: 1;
+  font-family: sans-serif;
+}
