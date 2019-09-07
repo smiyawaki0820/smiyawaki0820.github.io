@@ -93,22 +93,25 @@ input, select, textarea {
 }
 .portfolio {
 	font-family: 'Satisfy', cursive; 
-	font-size: 48px;
-	position: absolute;
+	font-size: 56px;
+	text-align: center;
+	position: relative;
 	top: -50px;
-	left: 1em;
+	left: -4em;
 }
 .name {
 	font-family: 'Rajdhani', sans-serif;
-	font-size: 48px;
+	font-size: 40px;
 	position: relative;
-	top: -50px;
-	left: 3em;
+	text-align: center;
+	top: -3em;
+	left: 4em;
 }
 .interest {
 	font-family: 'Caveat', cursive;
 	position: relative;
-	top: -60px;
+	text-align: center;
+	top: -6em;
 	left: 7em;
 }
 
