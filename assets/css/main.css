@@ -115,8 +115,13 @@ input, select, textarea {
 	left: 7em;
 }
 
+.my-small {
+	font-size: 0.8em;
+}
+
 .aboutme {
-	background-image: url("/images/harinezumi_osero.jpg")
+	background: #fff:
+	/* background-image: url("/images/harinezumi_osero.jpg") */
 }
 /* Basic */
 
