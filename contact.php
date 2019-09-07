@@ -14,7 +14,7 @@
             $content = $_POST['message'];
             $headers = $_POST['email'];
 
-			if(mb_send_mail($to, $title, $content, $headers)){
+			if(mail($to, $title, $content, $headers)){
 				echo "メールを送信しました";
 			} else {
 				echo "メールの送信に失敗しました";
