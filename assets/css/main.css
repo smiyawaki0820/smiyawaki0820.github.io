@@ -94,25 +94,25 @@ input, select, textarea {
 .portfolio {
 	font-family: 'Satisfy', cursive; 
 	font-size: 56px;
-	text-align: center;
+	text-align: left;
 	position: relative;
 	top: -50px;
-	left: -4em;
+	left: 10px;
 }
 .name {
 	font-family: 'Rajdhani', sans-serif;
 	font-size: 40px;
 	position: relative;
-	text-align: center;
+	text-align: right;
 	top: -3em;
-	left: 4em;
+	right: 10px;
 }
 .interest {
 	font-family: 'Caveat', cursive;
 	position: relative;
-	text-align: center;
-	top: -6em;
-	left: 7em;
+	text-align: right;
+	top: -130px;
+	right: 30px;
 }
 
 .my-small {

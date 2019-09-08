@@ -110,3 +110,23 @@ figure.my-figure.hover i {
   opacity: 1;
   font-family: sans-serif;
 }
+
+.img-blog{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+/*
+.img-blog:hover .ggm{
+    display: none;
+}
+*/
+
+.img-blog:hover {
+    background-image: url(../../images/ggm2.jpg);
+    z-index: 100;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
