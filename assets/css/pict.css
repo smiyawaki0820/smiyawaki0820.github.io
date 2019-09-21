@@ -115,15 +115,16 @@ figure.my-figure.hover i {
     position: relative;
     display: inline-block;
     text-align: center;
+    background-image: url(../../images/ggm.jpg) no-repeat;
 }
 
-/*
-.img-blog:hover .ggm{
-    display: none;
-}
-*/
 
-.img-blog:hover {
+.img-blog a{
+    background-image: url(../../images/ggm.jpg) no-repeat;
+}
+
+
+.img-blog a:hover {
     background-image: url(../../images/ggm2.jpg);
     z-index: 100;
     background-repeat: no-repeat;
