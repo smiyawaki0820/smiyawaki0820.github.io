@@ -96,6 +96,8 @@ input, select, textarea {
 	font-size: 56px;
 	text-align: left;
 	position: relative;
+	height: auto;
+    width: auto;
 	top: -50px;
 	left: 10px;
 }
@@ -104,6 +106,8 @@ input, select, textarea {
 	font-size: 40px;
 	position: relative;
 	text-align: right;
+	height: auto;
+    width: auto;
 	top: -3em;
 	right: 10px;
 }
@@ -111,6 +115,8 @@ input, select, textarea {
 	font-family: 'Caveat', cursive;
 	position: relative;
 	text-align: right;
+	height: auto;
+    width: auto;
 	top: -130px;
 	right: 30px;
 }
@@ -271,8 +277,8 @@ input, select, textarea {
 
 	.container .head_portfolio, h2 a strong{
 		position: relative;
-		width: 100%;
-		height: 60px;
+		width: auto;
+		height: auto;
 		line-height: 60px;
 		max-width: 1000px;
 		margin: 3px;
@@ -2072,10 +2078,14 @@ input, select, textarea {
 	}
 
 		.item header {
+			position: relative;
+			text-align: center;
 			background: #fff;
 			margin: 0;
 			padding: 1em 0 1em 0;
 			font-size: 0.8em;
+			min-width: 230px;
+			max-width: 315px;
 		}
 
 		.item header h3 {
