@@ -1,5 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,700);
 @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+.my-figure li{
+  float: left;
+  list-style: none;
+  display: inline;
+}
+
 figure.my-figure {
   font-family: 'Raleway', Arial, sans-serif;
   position: relative;
