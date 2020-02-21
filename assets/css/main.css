@@ -93,23 +93,23 @@ input, select, textarea {
 }
 .portfolio {
 	font-family: 'Satisfy', cursive; 
-	font-size: 56px;
+	font-size: 36px;
 	text-align: left;
 	position: relative;
 	height: auto;
     width: auto;
-	top: -50px;
+	top: -3em;
 	left: 10px;
 }
 .name {
 	font-family: 'Rajdhani', sans-serif;
-	font-size: 40px;
+	font-size: 28px;
 	position: relative;
-	text-align: right;
+	text-align: left;
 	height: auto;
     width: auto;
-	top: -3em;
-	right: 10px;
+	top: 0em;
+	left: 10px;
 }
 .interest {
 	font-family: 'Caveat', cursive;
@@ -1822,6 +1822,11 @@ input, select, textarea {
 			width: 100%;
 		}
 
+		.image.home {
+			position: relative;
+			width: 100%;
+		}
+
 		.image.avatar48 {
 			width: 48px;
 			height: 48px;
@@ -1829,8 +1834,9 @@ input, select, textarea {
 		}
 
 			.image.avatar48 img {
-				width: 48px;
-				height: 48px;
+				position: abusolute;
+				width: 100%;
+				
 			}
 
 		.image.fit {
@@ -1900,6 +1906,7 @@ input, select, textarea {
 			text-align: center;
 			border: 0;
 		}
+
 
 /* Form */
 
