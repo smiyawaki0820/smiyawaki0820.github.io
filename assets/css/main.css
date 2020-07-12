@@ -40,6 +40,13 @@ h1, h2, h3, h4, h5, h6 {
 	vertical-align: baseline;
 }
 
+
+div.indent-1 {
+	padding-left:1em;
+	text-indent:-1.5em;
+	line-height: 1.2em;
+}
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
@@ -78,6 +85,8 @@ mark {
 input::-moz-focus-inner {
 	border: 0;
 	padding: 0;
+	position: absolute;
+    left: 50%;
 }
 
 input, select, textarea {
@@ -144,7 +153,7 @@ input, select, textarea {
 		font-family: 'Source Sans Pro', sans-serif;
 		font-size: 19pt;
 		font-weight: 300;
-		line-height: 1.75em;
+		line-height: 1.60em;
 		color: #888;
 	}
 
@@ -163,7 +172,7 @@ input, select, textarea {
 		font-family: 'Source Sans Pro', sans-serif;
 		font-size: 19pt;
 		font-weight: 300;
-		line-height: 1.75em;
+		line-height: 1.60em;
 		color: #888;
 	}
 
@@ -272,6 +281,10 @@ input, select, textarea {
 		padding: 0 0 0 0;
 		font-size: 90%;
 		line-height: 0.8;
+	}
+
+	span.paper { 
+		line-height: 0.8em;
 	}
 
 	ul.tile {list-style-type: none;
@@ -1856,7 +1869,8 @@ input, select, textarea {
 
 		.image.home {
 			position: relative;
-			width: 100%;
+			width: 100vw;
+			z-index: 1;
 		}
 
 		.image.avatar48 {
