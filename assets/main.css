@@ -137,7 +137,7 @@ a {
 .bg_test {
 	text-align: center;
 	padding: 150px;
-	background-image: url('../../static/hedgehog.jpeg');
+	background-image: url('app/static/hedgehog.jpeg');
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
