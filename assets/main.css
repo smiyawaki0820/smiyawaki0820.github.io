@@ -140,7 +140,7 @@ a {
 	text-align: center;
 	padding: 150px;
 	max-width: 720px;
-	background-image: url('..//app/static/hedgehog.jpeg');
+	background-image: url('../app/static/hedgehog.jpg');
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
@@ -167,8 +167,8 @@ a {
 }
 
 .poster {
-	max-width: 360px;
-	max-height: 480px;
+	max-width: 280px;
+	max-height: 200px;
 	overflow: hidden;
 	margin: 0 0 0 0;
 	position: relative;
