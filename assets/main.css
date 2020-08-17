@@ -139,7 +139,7 @@ a {
 .bg_test {
 	text-align: center;
 	padding: 150px;
-	max-width: 720px;
+	width: 100%;
 	background-image: url('../app/static/hedgehog.jpg');
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -166,9 +166,14 @@ a {
 	font-size: 120%;
 }
 
+img {
+    width:auto;
+    height:auto;
+    max-width:100%;
+    max-height:100%;
+}
+
 .poster {
-	max-width: 64px;
-	max-height: 48px;
 	overflow: hidden;
 	margin: 0 0 0 0;
 	position: relative;
