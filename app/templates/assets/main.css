@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700');
+
+html, body, div, span, applet, object,
+iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+}
+
+header {
+    width: 100%;
+    padding: 30px 4% 10px;
+	background-color: white;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	display: flex;
+	align-items: center;
+}
+
+.right {
+	margin: 0 0 0 auto;
+	padding-right: 5em;
+}
+
+.center {
+	text-align: center;
+	margin: 0 auto;
+}
+
+nav {
+	margin: 0 0 0 auto;
+}
+
+ul.nav_header {
+	list-style: none;
+	margin: 0 0 0 auto;
+	display: flex;
+}
+
+li.nav_header {
+	margin: 0 0 0 15px;
+	font-size: 14px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	font-weight: bold;
+	font-family: 'Nato', sans-serif;
+	color: rgb(74, 43, 43);
+}
+
+h1.headline {
+	position: relative;
+	z-index: 10;
+	text-align: left;
+	padding-top: 1em;
+	padding-left: 1em;
+	bottom: -1em;
+}
+
+.div_headline{
+    border-bottom: solid 2px #9f9698;
+    padding-bottom: 1rem;
+	position: relative;
+	z-index: 10;
+}
+.div_headline:after{
+    border-bottom: solid 2px #615050;
+    bottom: -2px;
+    content: " ";
+    display: block;
+	position: absolute;
+	z-index: 10;
+	width: 20%;
+}
+
+div.context {
+	font-size: 100%;
+	padding-left: 1em;
+	color: rgb(96, 87, 87);
+}
+
+a {	
+	text-decoration: underline dotted rgb(196, 178, 178);
+	color: #655f5f;
+ }
+
+.padding_top0 {
+	padding-top: 0.5em;
+}
+
+.padding_top1 {
+	padding-top: 1em;
+}
+
+.padding_top2 {
+	padding-top: 2em;
+}
+
+.padding_left1 {
+	padding-left: 1em;
+}
+
+.padding_left2 {
+	padding-left: 2em;
+}
+
+.padding_both {
+	padding-left: 0.25em;
+	padding-right: 0.25em;
+}
+
+.blank {
+	margin: 150px auto;
+	text-align: center;
+}
+
+
+.bg_test {
+	text-align: center;
+	padding: 150px;
+	background-image: url('../../static/hedgehog.jpeg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+.sub_header {
+	padding: 1rem 2rem;
+	padding-left: 2px;
+}
+
+.horizontal-list {
+	overflow-x: auto;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+}
+
+.item {
+	display: inline-block;
+	width: 40%;
+	height: 200px;
+	margin: 16px;
+	font-size: 100%;
+}
+
+.poster {
+	max-width: 240px;
+	max-height: 360px;
+	overflow: hidden;
+	margin: 0 0 0 0;
+	position: relative;
+}
+
+.poster .caption {
+	font-size: 130%;
+	text-align: center;
+	color: #fff;
+}
+
+.poster .mask {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	background-color: rgba(0,0,0,0.4);
+	-webkit-transition:	all 0.6s ease;
+	transition:	all 0.6s ease;
+}
+
+.poster:hover .mask {
+	opacity: 1;
+	padding-top: 90px;
+}
+
+
+.contact {
+	position: relative;
+	margin: 16px auto;
+	text-align: center;
+	font-size: 100%;
+}
+
+.mail_form {
+	display: inline-block;
+	width: 80%;
+	height: 300px;
+	margin: 16px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	font-size: 100%;
+	background: rgb(191, 176, 176);
+}
+
+.footer {
+	position: relative;
+	text-align: center;
+	font-size: 80%;
+	color: rgb(82, 80, 80);
+	background: rgb(180, 171, 171);
+}
+
+
+.icon {
+	text-decoration: none;
+	text-decoration: none;
+}
+
+.icon:before {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 1;
+	text-transform: none !important;
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 400;
+}
+
+.icon:before {
+	line-height: inherit;
+}
+
+.icon > .label {
+	display: none;
+}
+
+.icon.solid:before {
+	font-weight: 900;
+}
+
+.icon.brands:before {
+	font-family: 'Font Awesome 5 Brands';
+}
+
+.horizontal {
+	list-style: none;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	margin: 0 auto;
+	text-align: center;
+}
