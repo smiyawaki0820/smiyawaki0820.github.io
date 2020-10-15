@@ -137,13 +137,14 @@ a {
 
 
 .bg_test {
-	text-align: center;
-	padding: 150px;
-	width: 100%;
+  text-align: center;
+  padding: 150px;
+  width: 100%;
 	background-image: url('../app/static/hedgehog.jpg');
 	background-repeat: no-repeat;
 	background-size: contain;
-	background-position: center;
+	background-position: center center;
+	background-attachment: fixed;
 }
 
 .sub_header {
