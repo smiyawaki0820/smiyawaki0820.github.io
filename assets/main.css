@@ -52,7 +52,7 @@ ul.nav_header {
 }
 
 li.nav_header {
-	margin: 0 0 0 15px;
+	margin: 0 0 15% auto;
 	font-size: 120%;
 }
 
