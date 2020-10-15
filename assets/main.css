@@ -49,11 +49,12 @@ ul.nav_header {
 	list-style: none;
 	margin: 0 0 0 auto;
 	display: flex;
+	text-align: justify;
 }
 
 li.nav_header {
-	margin: 0 0 15% auto;
-	font-size: 120%;
+	margin: 5px 5px 5px 5px;
+	font-size: 80%;
 }
 
 
@@ -131,15 +132,15 @@ a {
 }
 
 .blank {
-	margin: 150px auto;
+	margin: 170px auto;
 	text-align: center;
 }
 
 
 .bg_test {
-  text-align: center;
-  padding: 150px;
-  width: 100%;
+	text-align: center;
+	padding: 170px;
+	width: 100%;
 	background-image: url('../app/static/hedgehog.jpg');
 	background-repeat: no-repeat;
 	background-size: contain;
