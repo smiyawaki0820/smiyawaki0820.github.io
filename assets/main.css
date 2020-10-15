@@ -52,7 +52,7 @@ ul.nav_header {
 }
 
 li.nav_header {
-	margin: 0 0 0 15px;
+	margin: 0 0 15% auto;
 	font-size: 120%;
 }
 
@@ -137,13 +137,11 @@ a {
 
 
 .bg_test {
-	text-align: center;
-	padding: 150px;
-	width: 100%;
 	background-image: url('../app/static/hedgehog.jpg');
 	background-repeat: no-repeat;
 	background-size: contain;
-	background-position: center;
+	background-position: center center;
+	background-attachment: fixed;
 }
 
 .sub_header {
