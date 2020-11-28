@@ -132,19 +132,18 @@ a {
 }
 
 .blank {
-	margin: 170px auto;
+	margin: 200px 100%;
 	text-align: center;
 }
 
 
 .bg_test {
 	text-align: center;
-	padding: 170px;
-	width: 100%;
+	width: auto;
 	height: 100%;
 	background-image: url('../app/static/hedgehog.jpg');
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: auto 200px;
 	background-position: center center;
 	background-attachment: fixed;
 }
