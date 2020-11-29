@@ -21,6 +21,6 @@ fairseq_vocab
 
 ## Flask
 ```bash
-$ python run.py
+$ python main.py
 ```
 
