@@ -1,0 +1,141 @@
+#your_container{
+    /* 高さや幅など、好きな様に設定
+    bms_messages_containerの方で、縦横いっぱいに広がってくれるので、
+    ここで充てた高さと横幅がそのままスタイルになる仕組み */
+
+    height:300px;/*ここはご自由に*/
+    width: 50%;/*ここはご自由に*/
+    margin-bottom: 2em;
+}
+
+#bms_messages_container{
+    height: 100%;/*your_containerに対して100%になる */
+    width: 100%;/*your_containerに対して100%になる */
+}
+
+#bms_chat_header {
+    padding: 6px;
+    font-size: 16px;
+    width: calc(100% - 6px);
+    height: 34px;
+    background-color: rgb(176, 199, 176);
+    border: 1px solid rgb(187, 186, 186);
+    float: left;
+}
+    #bms_chat_user_status {
+        float: left;
+        width: 100%;
+    }
+    #bms_status_icon {
+        float: left;
+        line-height: 2em;
+    }
+    #bms_chat_user_name {
+        float: left;
+        line-height: 2em;
+        padding-left: 8px;
+    }
+
+#bms_messages {
+    overflow: auto;
+    height:100%;
+    border-right: 1px solid rgb(221, 221, 221);
+    border-left: 1px solid rgb(221, 221, 221);
+    background-color: rgb(226, 241, 231);
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2) inset;
+}
+
+/* メッセージ全般のスタイル */
+.bms_message {
+    margin: 0px;
+    padding: 0 14px;
+    font-size: 12px;
+    word-wrap: break-word;/* 自動改行 */
+    white-space: normal;/*指定widthに合わせて、文字を自動的に改行*/
+}
+    .bms_message_box{
+        margin-top: 20px;
+        max-width: 100%;
+        font-size: 12px;
+    }
+    .bms_message_content{
+        padding: 20px;
+    }
+
+    /* Left Message */
+    .bms_left {
+        float: left;
+        line-height: 1.1em;
+    }
+        .bms_left .bms_message_box {
+            color: #333;
+            background: #fff;
+            border: 2px solid #138e5b;
+            border-radius: 30px 30px 30px 0px; /* 左下を尖らせる */
+            margin-right: 50px;
+        }
+
+    /* Right Message */
+    .bms_right {
+        float: right;
+        line-height: 1.1em;
+    }
+        .bms_right .bms_message_box {
+            color: #fff;
+            background: #138e5b;
+            border: 2px solid #138e5b;
+            border-radius: 30px 30px 0px 30px; /* 右下を尖らせる */
+            margin-left: 50px;
+        }
+
+    .bms_clear {
+        clear: both;
+    }
+
+/* Text & Sending Botton */
+#bms_send {
+    background-color: rgb(238, 238, 238);
+    border-right: 1px solid rgb(221, 221, 221);
+    border-left: 1px solid rgb(221, 221, 221);
+    border-bottom: 1px solid rgb(221, 221, 221);
+    height: 48px;
+    padding: 4px;
+}
+
+    #bms_send_message{
+        width: calc(100% - 75px);/*常に送信ボタンの横幅を引いたサイズに動的に計算*/
+        line-height: 12px;
+        height: 48px;
+        padding: 14px 6px 0px 6px;/*文字がテキストエリアの中心になる様に隙間調整*/
+        border: 1px solid #ccc;
+        border-radius: 4px;/*角丸*/
+        text-align: left;/*文字を左寄せ*/
+        box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.2) inset;/*内側に影を入れてテキストエリアらしくした*/
+        box-sizing: border-box;/*paddingとborderの要素の高さと幅の影響をなくす（要素に高さと幅を含める）*/
+
+    }
+    #bms_send_btn {
+        width: 72px;
+        height: 48px;
+        font-size: 12px;
+        line-height: 12px;
+        float: right;
+        color: #fff;
+        font-weight: bold;
+        background: #bcbcbc;
+        text-align: center;
+        border: 1px solid #bbb;
+        border-radius: 4px;/*角丸*/
+        box-sizing: border-box;/*paddingとborderの要素の高さと幅の影響をなくす（要素に高さと幅を含める）*/
+    }
+
+    /* Sending Botton*/
+    #bms_send_btn:hover {
+        background: #138e5b;
+        cursor: pointer;
+    }
+
+#clear_botton{
+    margin-bottom: 3em;
+    text-align: center;
+}
