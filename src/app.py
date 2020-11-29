@@ -25,10 +25,12 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 app = Flask(__name__)
 
+ROOT = '/work02/miyawaki/smiyawaki0820.github.io'
+
 
 # Model ==========================================
 
-sys.path.append('/work02/miyawaki/ILYS-aoba-chatbot')
+sys.path.append(os.path.join(ROOT, 'ILYS-aoba-chatbot'))
 from src.models.ilys import IlysAobaBot
 from neural_dialogue_model.model_args import Args
 from neural_dialogue_model.models import NeuralDialogueModel
@@ -36,11 +38,11 @@ from neural_dialogue_model.models import NeuralDialogueModel
 parser = argparse.ArgumentParser(description='')
 group = parser.add_argument_group("Dialogues")
 group.add_argument('--model', type=path.abspath, metavar="FP", help="Path to model parameters",
-    default='/work02/miyawaki/ILYS-aoba-chatbot/models/ilys_aoba_transformer_finetuned.pt')
+    default=os.path.join(ROOT, 'models/ilys_aoba_transformer_finetuned.pt'))
 group.add_argument('--spm', type=path.abspath, metavar="FP", help="Path to sentencepiece model",
-    default='/work02/miyawaki/ILYS-aoba-chatbot/models/spm_10M_tweets.cr9999.bpe.32000.model')
+    default=os.path.join(ROOT, 'models/spm_10M_tweets.cr9999.bpe.32000.model'))
 group.add_argument('--vocab', type=path.abspath, metavar="FP", help="Path to vocab",
-    default='/work02/miyawaki/ILYS-aoba-chatbot/fairseq_vocab')
+    default=os.path.join(ROOT, 'data/fairseq_vocab'))
 parser_args = parser.parse_args()
 
 args = Args(
