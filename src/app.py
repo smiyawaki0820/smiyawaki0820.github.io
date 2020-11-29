@@ -1,6 +1,10 @@
 import os
+from os import path
 import sys
 import logging
+import argparse
+from typing import List
+from pprint import pprint
 from hashlib import sha256
 from datetime import datetime
 
@@ -19,12 +23,43 @@ logging.basicConfig(
 )
 
 logger = logging.getLogger(__name__)
-
 app = Flask(__name__)
 
-from src.models.mlm import MaskedLanguageModel
-global mlm
-mlm = MaskedLanguageModel()
+
+# Model ==========================================
+
+sys.path.append('/work02/miyawaki/ILYS-aoba-chatbot')
+from src.models.ilys import IlysAobaBot
+from neural_dialogue_model.model_args import Args
+from neural_dialogue_model.models import NeuralDialogueModel
+
+parser = argparse.ArgumentParser(description='')
+group = parser.add_argument_group("Dialogues")
+group.add_argument('--model', type=path.abspath, metavar="FP", help="Path to model parameters",
+    default='/work02/miyawaki/ILYS-aoba-chatbot/models/ilys_aoba_transformer_finetuned.pt')
+group.add_argument('--spm', type=path.abspath, metavar="FP", help="Path to sentencepiece model",
+    default='/work02/miyawaki/ILYS-aoba-chatbot/models/spm_10M_tweets.cr9999.bpe.32000.model')
+group.add_argument('--vocab', type=path.abspath, metavar="FP", help="Path to vocab",
+    default='/work02/miyawaki/ILYS-aoba-chatbot/fairseq_vocab')
+parser_args = parser.parse_args()
+
+args = Args(
+    model_path=parser_args.model, 
+    spm_path=parser_args.spm, 
+    vocab_path=parser_args.vocab
+)
+
+dialogue_model = NeuralDialogueModel(args)
+
+global model
+model = IlysAobaBot(dialogue_model)
+
+# Sample Input
+model.predict('こんにちは．あおばさんは今何してますか．')
+model.predict('一日中ゴロゴロしてたんですか？')
+model.clear()
+
+# ================================================
 
 
 @app.route("/")
@@ -98,7 +133,7 @@ def interface():
     try:
         input_text = request.form["input_text"]
         logger.info(f'GET | {input_text}')
-        outputs: list = mlm.predict(input_text)
+        outputs: list = model.predict(input_text)
         state = 'TRUE'
     except:
         outputs=[]
@@ -107,5 +142,5 @@ def interface():
 
 @app.route('/clear_history',methods=['post'])
 def clear_history():
-    mlm.clear()
+    model.clear()
     return render_template("index.html")
