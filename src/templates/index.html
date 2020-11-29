@@ -96,16 +96,32 @@
           </div>
           <br>
 
+          <div class="center" id="botname">
+            <p>🌱 ILYS aoba</p>
+          </div>
+
           <div>
             <div id="your_container" class="center">
               <div id="bms_messages_container">
 
-                <div id="bms_chat_header" class="center">
-                  <div id="bms_status_icon">🌱</div>
-                  <div id="bms_chat_user_name">ILYS aoba</div>
-                </div>
+                <!--<div id="bms_chat_header" class="center">
+                <div id="bms_status_icon">🌱</div>
+                <div id="bms_chat_user_name">ILYS aoba</div>
+                </div>-->
 
                 <div id="bms_messages" class="center">
+                  {% if outputs is not defined %}
+                  <div class="bms_message bms_left">
+                    <div class="bms_message_box">
+                      <div class="bms_message_content">
+                        <div class="bms_message_text">
+                          何か話しかけてください
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bms_clear"></div>
+                  {% endif %}
                   {% for output in outputs %}
                   {% if (loop.index0 % 2) == 0 %}
                   <div class="bms_message bms_right">
@@ -148,7 +164,6 @@
         </div>
 
         <!-- Clear -->
-        <br><br>
         <div id="clear_botton" class="center">
           <form action="/clear_history" method="post">
             <input type="submit" value="クリア">

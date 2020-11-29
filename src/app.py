@@ -108,4 +108,4 @@ def interface():
 @app.route('/clear_history',methods=['post'])
 def clear_history():
     mlm.clear()
-    return render_template("index.html", outputs=[])
+    return render_template("index.html")
