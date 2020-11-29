@@ -10,5 +10,5 @@ pip-sync
 
 pip install torch==1.6.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
 
-cd ../fairseq
+cd ../ILYS-aoba-chatbot/fairseq
 pip install --editable .
