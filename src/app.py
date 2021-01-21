@@ -25,8 +25,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 app = Flask(__name__)
 
-ROOT = '/work02/miyawaki/smiyawaki0820.github.io'
-
+ROOT = '/Users/miyawaki_shumpei/smiyawaki0820.github.io'
 
 # Model ==========================================
 
@@ -129,7 +128,6 @@ def to_csv():
         state = 'FALSE'
     return render_template("index.html", fo_csv=fo_csv, state=state)
 
-
 @app.route("/interface",methods=["post"])
 def interface():
     try:
@@ -140,7 +138,8 @@ def interface():
     except:
         outputs=[]
         state = 'FALSE'
-    return render_template("index.html", outputs=outputs, state_interface=state)
+    id = request.args.get('id')
+    return render_template("index.html", id=id, outputs=outputs, state_interface=state)
 
 @app.route('/clear_history',methods=['post'])
 def clear_history():

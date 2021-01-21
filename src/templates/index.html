@@ -86,8 +86,13 @@
           <div class="context">
             <p class="padding_top1 padding_left1"><font size="4">
               <a href="https://jsai-slud.github.io/sig-slud/">人工知能学会 言語・音声理解と対話処理研究会 SIG-SLUD 2020</a> 「対話システムライブコンペティション3」のオープントラックに提出し，
-              我々が構築した対話システム「ILYS aoba bot」が予選を2位で通過しました．
+              我々が構築した対話システム「ILYS aoba bot」が NTT CS研 に次いで参加チーム中２位になりました．
             </font></p>
+            <div class="padding_top2 padding_left2"><font size="3">
+              <ul>
+                <li><a href="https://github.com/cl-tohoku/ILYS-aoba-chatbot">Github: ILYS-aoba-chatbot</a></li>
+              </ul>
+            </font></div>
             <p class="padding_top1 padding_left1"><font size="2">
               本コンペティションのオープントラックは「自然，かつ，ユーザが話したい話題について情報交換が可能なシステムであるか」を競うものであるため，
               システムが話題に即した自然な応答が可能であり，また話題に関する新たな情報を提供できることが可能なシステム構築を目的とし，
@@ -100,7 +105,7 @@
             <p>🌱 ILYS aoba</p>
           </div>
 
-          <div>
+          <div id="ILYS_chatbot">
             <div id="your_container" class="center">
               <div id="bms_messages_container">
 
@@ -164,6 +169,7 @@
         </div>
 
         <!-- Clear -->
+        <br>
         <div id="clear_botton" class="center">
           <form action="/clear_history" method="post">
             <input type="submit" value="クリア">
@@ -175,14 +181,10 @@
           <h2 class="padding_left1">Efficient Open-Domain Question Answering</h2>
           <div class="context">
             <p class="padding_top1 padding_left1"><font size="4">
-              国際会議 <a href="https://nips.cc/Conferences/2020">NeurIPS 2020</a> で開催された QA Competition (<a href="https://efficientqa.github.io/">Efficient Open-Domain Question Answering</a>) に Studio Ousia さんと共同で開発させていただいた Sōseki で挑み，
+              国際会議 <a href="https://nips.cc/Conferences/2020">NeurIPS 2020</a> で開催された QA Competition (<a href="https://efficientqa.github.io/">Efficient Open-Domain Question Answering</a>) に 
+              Studio Ousia さんと共同で開発させていただいた「Sōseki」で挑み，
               Unrestrictedトラックで マイクロソフト社@MSFTResearch，フェイスブック社@facebookai に次いで参加チーム中3位、6GBトラックで参加チーム中2位になりました．
             </font></p>
-            <div class="padding_top2 padding_left2"><font size="3">
-              <ul>
-                <li><a href="https://efficientqa.github.io/unrestricted_leaderboard.html">Unrestricted Leaderboard</a></li>
-              </ul>
-            </font></div>
             <p class="padding_top1 padding_left1"><font size="2">
               In this competition contestants will develop a question answering system that contains all of the knowledge required to answer open-domain questions. 
               There are no constraints on how the knowledge is stored—it could be in documents, databases, the parameters of a neural network, or any other form. 
@@ -190,8 +192,319 @@
               There will also be an unconstrained track, in which the goal is to achieve the best possible question answering performance with no constraints. 
               The best performing systems from each of the tracks will be put to test in a live competition against trivia experts during the NeurIPS 2020 competition track.
             </font></p>
+            <br>
+            <div class="center"><font size="3">
+              <a href="https://efficientqa.github.io/unrestricted_leaderboard.html">Unrestricted Leaderboard</a>
+            </font></div>
+            <div style="height:200px; width:80%; max-width: 600px; overflow:auto; table-layout: fixed;" class="center"><font size="1">
+              <table border=1 style="width:100%; background-color:rgb(250, 250, 245); color:black;">
+                <tr style="background-color: #8a7f82; color: white;">
+                  <th>Model</th>
+                  <th>Participant</th>
+                  <th>Affiliation</th>
+                  <th>System size</th>
+                  <th>Accuracy</th>
+                </tr>
+                <!--<tbody style="width:100%;">-->
+                <tr>
+                  <td>UnitedQA</td>
+                  <td>Microsoft Research &amp; Dynamics 365 AI</td>
+                  <td>Microsoft Research &amp; Dynamics 365 AI</td>
+                  <td>--</td>
+                  <td>54.00</td>
+                </tr>
+                <tr>
+                  <td>Hybrid</td>
+                  <td>Facebook AI</td>
+                  <td>QA@FBAI</td>
+                  <td>--</td>
+                  <td>53.89</td>
+                </tr>
+                <tr>
+                  <td>Model 2</td>
+                  <td>FAIR-Paris&amp;London</td>
+                  <td>Facebook</td>
+                  <td>5.85 GiB</td>
+                  <td>53.33</td>
+                </tr>
+                <tr>
+                  <td>Model 1</td>
+                  <td>FAIR-Paris&amp;London</td>
+                  <td>Facebook</td>
+                  <td>5.66 GiB</td>
+                  <td>52.78</td>
+                </tr>
+                <tr>
+                  <td>soseki</td>
+                  <td>ousia_tohoku</td>
+                  <td>Studio Ousia &amp; Tohoku University</td>
+                  <td>--</td>
+                  <td>52.44</td>
+                </tr>
+                <tr>
+                  <td>R2D2_v2_full</td>
+                  <td>KNOT@FIT</td>
+                  <td>Brno University of Technology</td>
+                  <td>*66 GiB</td>
+                  <td>50.33</td>
+                </tr>
+                <tr>
+                  <td>Soseki</td>
+                  <td>ousia_tohoku</td>
+                  <td>Studio Ousia &amp; Tohoku University</td>
+                  <td>5.63 GiB</td>
+                  <td>50.17</td>
+                </tr>
+                <tr>
+                  <td>Soseki</td>
+                  <td>ousia_tohoku</td>
+                  <td>Studio Ousia &amp; Tohoku University</td>
+                  <td>4.86 GiB</td>
+                  <td>50.11</td>
+                </tr>
+                <tr>
+                  <td>Soseki</td>
+                  <td>ousia_tohoku</td>
+                  <td>Studio Ousia &amp; Tohoku University</td>
+                  <td>5.37 GiB</td>
+                  <td>49.39</td>
+                </tr>
+                <tr>
+                  <td> </td>
+                  <td>Noah_NLP</td>
+                  <td>Huawei Noah’s Ark Lab</td>
+                  <td>--</td>
+                  <td>48.06</td>
+                </tr>
+                <tr>
+                  <td> </td>
+                  <td>Noah_NLP</td>
+                  <td>Huawei Noah’s Ark Lab</td>
+                  <td>--</td>
+                  <td>47.61</td>
+                </tr>
+                <tr>
+                  <td>R2D2_v2</td>
+                  <td>KNOT@FIT</td>
+                  <td>Brno University of Technology</td>
+                  <td>5.95 GiB</td>
+                  <td>47.28</td>
+                </tr>
+                <tr>
+                  <td> </td>
+                  <td> </td>
+                  <td>Salesforce</td>
+                  <td>--</td>
+                  <td>46.83</td>
+                </tr>
+                <tr>
+                  <td>R2D2</td>
+                  <td>KNOT@FIT</td>
+                  <td>Brno University of Technology</td>
+                  <td>5.38 GiB</td>
+                  <td>46.06</td>
+                </tr>
+                <tr>
+                  <td> </td>
+                  <td> </td>
+                  <td>Salesforce</td>
+                  <td>*5.7 GiB</td>
+                  <td>45.83</td>
+                </tr>
+                <tr>
+                  <td>CDPR-FID</td>
+                  <td>BearQA</td>
+                  <td>UC Berkley</td>
+                  <td>--</td>
+                  <td>40.83</td>
+                </tr>
+                <tr>
+                  <td>R1D1</td>
+                  <td>KNOT@FIT</td>
+                  <td>Brno University of Technology</td>
+                  <td>5.29 GiB</td>
+                  <td>40.56</td>
+                </tr>
+                <tr>
+                  <td>uclnlp-fair-efficientqa-xlg</td>
+                  <td>uclnlp-efficientqa</td>
+                  <td>University College London and Facebook AI Research</td>
+                  <td>*1.16GiB</td>
+                  <td>39.11</td>
+                </tr>
+                <tr>
+                  <td>DPR model serving using Vespa.ai</td>
+                  <td>Vespa Team</td>
+                  <td>Vespa.ai</td>
+                  <td>--</td>
+                  <td>35.00</td>
+                </tr>
+                <tr>
+                  <td>REALM</td>
+                  <td>Orgainizers</td>
+                  <td>EfficientQA</td>
+                  <td>27.19 GiB</td>
+                  <td>34.89</td>
+                </tr>
+                <tr>
+                  <td>uclnlp-fair-efficientqa-lg</td>
+                  <td>uclnlp-efficientqa</td>
+                  <td>University College London and Facebook AI Research</td>
+                  <td>336.23 MiB</td>
+                  <td>33.44</td>
+                </tr>
+                <tr>
+                  <td>RDR-500MB</td>
+                  <td>naver-clova-parsing</td>
+                  <td>Naver Clova</td>
+                  <td>484.69 MiB</td>
+                  <td>32.06</td>
+                </tr>
+                <tr>
+                  <td>RDR-6GB</td>
+                  <td>naver-clova-parsing</td>
+                  <td>Naver Clova</td>
+                  <td>5.78 GiB</td>
+                  <td>32.06</td>
+                </tr>
+                <tr>
+                  <td>EFF-Large</td>
+                  <td>Beauty-P</td>
+                  <td>PA Tech</td>
+                  <td>--</td>
+                  <td>31.11</td>
+                </tr>
+                <tr>
+                  <td>ba45-micro</td>
+                  <td>BA45</td>
+                  <td>BA45</td>
+                  <td>5.57 GiB</td>
+                  <td>31.11</td>
+                </tr>
+                <tr>
+                  <td>ba45-micro</td>
+                  <td>BA45</td>
+                  <td>BA45</td>
+                  <td>5.53 GiB</td>
+                  <td>29.97</td>
+                </tr>
+                <tr>
+                  <td>uclnlp-fair-efficientqa-lg</td>
+                  <td>uclnlp-efficientqa</td>
+                  <td>University College London and Facebook AI Research</td>
+                  <td>226.09 MiB</td>
+                  <td>29.44</td>
+                </tr>
+                <tr>
+                  <td>ba45-micro</td>
+                  <td>BA45</td>
+                  <td>BA45</td>
+                  <td>5.33 GiB</td>
+                  <td>28.83</td>
+                </tr>
+                <tr>
+                  <td>RDR-500MB</td>
+                  <td>naver-clova-parsing</td>
+                  <td>Naver Clova</td>
+                  <td>496.99 MiB</td>
+                  <td>28.22</td>
+                </tr>
+                <tr>
+                  <td>T5-1.1-XL + SSM</td>
+                  <td>Organizers</td>
+                  <td>EfficientQA</td>
+                  <td>5.65 GiB</td>
+                  <td>27.89</td>
+                </tr>
+                <tr>
+                  <td>EFF-Small</td>
+                  <td>Beauty-P</td>
+                  <td>PA Tech</td>
+                  <td>--</td>
+                  <td>27.89</td>
+                </tr>
+                <tr>
+                  <td>NTUSTTTTT</td>
+                  <td>Jia-Zhi_Guo</td>
+                  <td>National Taiwan University of Science and Technology</td>
+                  <td>5.65 GiB</td>
+                  <td>27.17</td>
+                </tr>
+                <tr>
+                  <td>uclnlp-fair-efficientqa</td>
+                  <td>uclnlp-efficientqa</td>
+                  <td>University College London and Facebook AI Research</td>
+                  <td>29.43 MiB</td>
+                  <td>26.78</td>
+                </tr>
+                <tr>
+                  <td>uclnlp-fair-efficientqa</td>
+                  <td>uclnlp-efficientqa</td>
+                  <td>University College London and Facebook AI Research</td>
+                  <td>157.26 MiB</td>
+                  <td>25.78</td>
+                </tr>
+                <tr>
+                  <td>uclnlp-fair-efficientqa</td>
+                  <td>uclnlp-efficientqa</td>
+                  <td>University College London and Facebook AI Research</td>
+                  <td>5.87 GiB</td>
+                  <td>25.78</td>
+                </tr>
+                <tr>
+                  <td>hsjdpr</td>
+                  <td>LSLL</td>
+                  <td>LSLL</td>
+                  <td>13.97 GiB</td>
+                  <td>25.61</td>
+                </tr>
+                <tr>
+                  <td>aqa-udm</td>
+                  <td>AQA-UDM</td>
+                  <td>University of Montreal</td>
+                  <td>14.17 GiB</td>
+                  <td>25.22</td>
+                </tr>
+                <tr>
+                  <td>uclnlp-fair-efficientqa</td>
+                  <td>uclnlp-efficientqa</td>
+                  <td>University College London and Facebook AI Research</td>
+                  <td>28.61 MiB</td>
+                  <td>24.83</td>
+                </tr>
+                <tr>
+                  <td>ssm_nq_torch</td>
+                  <td>machnev</td>
+                  <td>Higher School of Economics</td>
+                  <td>3.02 GiB</td>
+                  <td>20.11</td>
+                </tr>
+                <tr>
+                  <td>FRY-T</td>
+                  <td>FRY</td>
+                  <td>FRY</td>
+                  <td>423.29 MiB</td>
+                  <td>19.39</td>
+                </tr>
+                <tr>
+                  <td>NTUSttttt</td>
+                  <td>Chia-Chih_Kuo</td>
+                  <td>National Taiwan University of Science and Technology</td>
+                  <td>488.96 MiB</td>
+                  <td>18.39</td>
+                </tr>
+                <tr>
+                  <td>T5-1.1-small + SSM</td>
+                  <td>Organizers</td>
+                  <td>EfficientQA</td>
+                  <td>486.61 MiB</td>
+                  <td>17.61</td>
+                </tr>
+                <!--</tbody>-->
+              </table>
+            </div>
           </div>
-        </div>
+        </font></div>
 
         <div class="sub_header">
           <h2 class="padding_left1">AI王 ~クイズAI日本一決定戦</h2>
@@ -349,21 +662,21 @@
       </div>
     </div>
 
-  </body>
+    <div class="footer center">
+      <div class="padding_top1">
+        <p>If you require any further help, please do not hesitate to contact me</p>
+        <p>miyawaki.shumpei@ecei.tohoku.ac.jp</p>  
+      </div>
+      <div class="center padding_top1">
+        <ul class="icons horizontal">
+          <li class="padding_both"><a href="https://twitter.com/catshun_" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+          <li class="padding_both"><a href="https://www.facebook.com/shumpei.miyawaki?ref=bookmarks" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+          <li class="padding_both"><a href="https://github.com/smiyawaki0820" class="icon brands fa-github"><span class="label">Github</span></a></li>
+          <li class="padding_both"><a href="https://www.instagram.com/shumpeimiyawaki/?hl=ja" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+        </ul>
+      </div>
+    </div>
 
-  <div id="footer" class="footer">
-    <div class="padding_top1">
-      <p>If you require any further help, please do not hesitate to contact me</p>
-      <p>miyawaki.shumpei@ecei.tohoku.ac.jp</p>  
-    </div>
-    <div class="center padding_top1">
-      <ul class="icons horizontal">
-        <li class="padding_both"><a href="https://twitter.com/catshun_" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-        <li class="padding_both"><a href="https://www.facebook.com/shumpei.miyawaki?ref=bookmarks" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-        <li class="padding_both"><a href="https://github.com/smiyawaki0820" class="icon brands fa-github"><span class="label">Github</span></a></li>
-        <li class="padding_both"><a href="https://www.instagram.com/shumpeimiyawaki/?hl=ja" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-      </ul>
-    </div>
-  </div>
+  </body>
 
 </html>
