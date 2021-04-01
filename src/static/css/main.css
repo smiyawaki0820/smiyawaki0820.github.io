@@ -208,3 +208,10 @@ iframe {
         cursor: pointer;
     }
 
+.details {
+  padding: 0.25em 0.5em;
+  color: #333333;
+  background: transparent;
+  border-left: solid 5px #f0ebeb;
+  font-size: small;
+}

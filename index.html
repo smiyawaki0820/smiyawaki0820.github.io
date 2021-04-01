@@ -75,9 +75,13 @@
               <h2 class="title">QA 形式に基づく述語項構造データ収集</h2>
             </div>
             <div class="area">
-              <p>
-                述語項構造解析、特にゼロ照応を対象に、新たなデータ形式によるデータセットの作成を行う。新たなデータ形式として、自然言語ベースの QA 形式によるアノテーション方式を採用することで、専門家によらず誰でもアノテーションが可能となり、大規模なデータセットの収集が期待される。
-                例えば、「太郎 が 学校 に 行っ た 。」という文章に対して、「誰が学校に行った？太郎」のような質問と答えのペアを作成する。
+              <p class="details" style="font-size:small;">
+                述語項構造解析では、文章中の述語に対して「誰が、何を、どうした」のような主語や目的語を同定するタスクで、
+                文構造を正しく捉えることから、機械翻訳や質問応答のような下流タスクでも応用されます。
+                日本語では語の省略（ゼロ照応）が頻繁に発生しますが、ゼロ照応では計算機が適切に学習を行うための学習データが不足しています。
+                従来のアノテーション形式では、言語学の専門家によるデータ収集が必要であったため、大規模なデータ収集が困難であった一方、
+                自然言語の QA 形式によるアノテーション形式（QA-SRL）が提案され、誰でもアノテーションが可能となり、大規模なデータセットの収集が可能となりました。
+                我々は QA-SRL の形式に従い、「誰が学校に行った？太郎」のような質問と答えのペアを、データ横断的に作成することを目指しています。
               </p>
             </div>
           </div>
@@ -86,24 +90,24 @@
         <div id="project_dialogue" class="box_subsec">
           <div class="area">
             <div class="subsec">
-              <h2 class="title">雑談対話応答システム構築</h2>
+              <h2 class="title">感情制御を取り入れた雑談対話応答システム</h2>
             </div>
             <div class="area">
               <p>
-                研究室の有志で雑談型対話システムを構築しており、中でも、感情分析モジュールを担当しています。
+                研究室の数名で、感情制御を取り入れた雑談対話システムを構築しています。
                 ユーザの感情を分析し、より感情豊かで適切な応答生成を目指し、開発を行っています。
               </p>
             </div>
             <div class="area">
-              <p style="font-size: small;">
-              2020 年下半期では、Twitter のリプライチェーンから、絵文字が付与された応答文を学習データとして抽出し、SLUD （下記詳細）で構築した対話モデル「ILYS aoba ボット」を Fine-tuning することで、四つの感情（喜怒哀楽）を制御した応答生成に取り組みました。
+              <p class="details" style="font-size: small;">
+                直近の取り組みでは、Twitter のリプライチェーンから、絵文字が付与された応答文を学習データとして抽出し、学習済みの対話モデル「ILYS aoba ボット」をファインチューニングすることで、四つの感情（喜怒哀楽）を制御した応答生成に取り組みました。
               </p>
             </div>
           </div>
 
           <div class="area">
             <div class="subsec">
-              <h2 class="title">SLUD-2020</h2>
+              <h2 class="title">対話システムコンペティション（SIG-SLUD 2020）</h2>
             </div>
             <div class="area">
               <p>
@@ -112,7 +116,7 @@
               </p>
             </div>
             <div class="area">
-              <p style="font-size: small;">
+              <p class="details" style="font-size: small;">
                 「自然、かつ、ユーザが話したい話題について情報交換が可能なシステム」の構築を目的とし、
                 話題に即した自然な応答が可能な系列変換器、
                 および話題に関する新たな情報を提供する知識ベースの応答モジュールを統合しました。
@@ -135,28 +139,24 @@
         <div id="project_efqa" class="box_subsec">
           <div class="area">
             <div class="subsec">
-              <h2 class="title">Efficient Open-Domain Question Answering</h2>
+              <h2 class="title">Efficient Open-Domain Question Answering (NeurIPS 2020)</h2>
             </div>
             <div class="area">
               <p>
-                国際会議 <a href="https://nips.cc/Conferences/2020">NeurIPS 2020</a> で開催された
-                QA コンペ「<a href="https://efficientqa.github.io/">Efficient Open-Domain Question Answering (Efficient QA)</a>」 に 
-                株式会社 Studio Ousia さんと共同で開発させていただいた「<a href="http://soseki.ai/">Sōseki</a>」で挑み、
+                <a href="https://nips.cc/Conferences/2020">NeurIPS 2020</a> で開催された
+                オープンドメイン QA システムのコンペティション「<a href="https://efficientqa.github.io/">Efficient Open-Domain Question Answering (Efficient QA)</a>」 に 
+                株式会社 Studio Ousia さんと東北大学の共同チームで挑み、
                 <a href="https://efficientqa.github.io/unrestricted_leaderboard.html">unrestricted track contestants</a> で第三位、
                 system under 6GB track contestants で準優勝の成績を収めました。
               </p>
             </div>
             <div class="area">
-              <p style="font-size: small;">
-                任意のファクトイド型の質問に対して、選択肢のような参照する知識源を特に規定しない「オープンドメイン QA タスク」では、一般に以下のような解法が用いられる：
+              <p class="details" style="font-size: small;">
+                任意のファクトイド型の質問に対して、選択肢のような参照する知識源を特に規定しない「オープンドメイン QA タスク」では、一般に以下のような解法が用いられます：
                 (1) 大規模な文書集合から質問に関連する文書を検索モジュール (retriever) が抽出し、
                 (2) 抽出された関連文書から読解モジュール (reader/generator) が、質問の解答を推定する。
                 我々は、retriever に <a href="https://arxiv.org/abs/2004.04906">Dense Passage Retriever (DPR)</a> 、reader (抽出型読解システム) に ELECTRA 、generator (生成型読解システム) に T5 を用いて、最終的にアンサンブルを行いました。
-                その他詳細については、以下の資料や<a href="https://arxiv.org/abs/2101.00133">論文</a>を参照下さい。
-              </p>
-              <p style="font-size: small; padding-top: 1em;">
-              - 言語処理学会2020 ワークショップ「AI王 ~クイズAI日本一決定戦」にて、「<a href="https://speakerdeck.com/ikuyamada/opundomeinzhi-wen-ying-da-ji-shu-falsezui-xin-dong-xiang">オープンドメイン質問応答技術の最新動向</a>」と題して、山田育矢様（株式会社 Studio Ousia）による招待講演が開催されました。
-              Efficient QA で取り組んだシステムの紹介や、オープンドメイン QA の最新動向について解説されています。
+                その他詳細については、<a href="https://arxiv.org/abs/2101.00133">論文</a>を参照下さい。
               </p>
             </div>
           </div>
@@ -253,7 +253,7 @@
               <li class="item">
                 <div class="poster">
                   <a href="https://www.anlp.jp/nlp2021/program_online/pdf_dir/P7-15.pdf" style="color:white;">
-                    <img src="/static/img/nlp2021_poster.png">
+                    <img src="src/static/img/nlp2021_poster.png">
                     <div class="mask">
                       <div class="poster_info">
                         <div class="area">
@@ -276,7 +276,7 @@
               <li class="item">
                 <div class="poster">
                   <a href="https://drive.google.com/file/d/1xX-JabYTNXaogSgIJKV6slYz4AHau44B/view?usp=sharing" style="color:white;">
-                    <img src="/static/img/yans20_miya.png">
+                    <img src="src/static/img/yans20_miya.png">
                     <div class="mask">
                       <div class="poster_info">
                         <div class="area">
@@ -305,7 +305,7 @@
               <li class="item">
                 <div class="poster">
                   <a href="https://drive.google.com/open?id=1Sg3vIrE_kxbyBGAR-4UCj3ii3keyK_EM" style="color:white;">
-                    <img src="/static/img/yans19_miya.png">
+                    <img src="src/static/img/yans19_miya.png">
                     <div class="mask">
                       <div class="poster_info">
                         <div class="area">
@@ -328,7 +328,7 @@
               <li class="item">
                 <div class="poster">
                   <a href="https://drive.google.com/open?id=1v_ncTr7w3RoCmHvaAx2SR-dlZJeB86iP" style="color:white;">
-                    <img src="/static/img/yans19_kato.png">
+                    <img src="src/static/img/yans19_kato.png">
                     <div class="mask">
                       <div class="poster_info">
                         <div class="area">
