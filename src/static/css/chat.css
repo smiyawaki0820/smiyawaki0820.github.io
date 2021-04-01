@@ -3,7 +3,7 @@
     bms_messages_containerの方で、縦横いっぱいに広がってくれるので、
     ここで充てた高さと横幅がそのままスタイルになる仕組み */
 
-    height:300px;/*ここはご自由に*/
+    height:350px;/*ここはご自由に*/
     width: 50%;/*ここはご自由に*/
     margin-bottom: 2em;
 }
@@ -100,19 +100,17 @@
 
 /* Text & Sending Botton */
 #bms_send {
-    background-color: rgb(238, 238, 238);
-    border-right: 1px solid rgb(221, 221, 221);
-    border-left: 1px solid rgb(221, 221, 221);
-    border-bottom: 1px solid rgb(221, 221, 221);
+    background-color: rgb(110, 128, 114);
     height: 48px;
     padding: 4px;
+    width: 99%;
 }
 
     #bms_send_message{
-        width: calc(100% - 75px);/*常に送信ボタンの横幅を引いたサイズに動的に計算*/
+        width: calc(99% - 75px);/*常に送信ボタンの横幅を引いたサイズに動的に計算*/
         line-height: 12px;
         height: 48px;
-        padding: 14px 6px 0px 6px;/*文字がテキストエリアの中心になる様に隙間調整*/
+        padding: 7px 6px 7px 6px;/*文字がテキストエリアの中心になる様に隙間調整*/
         border: 1px solid #ccc;
         border-radius: 4px;/*角丸*/
         text-align: left;/*文字を左寄せ*/
@@ -125,23 +123,32 @@
         height: 48px;
         font-size: 12px;
         line-height: 12px;
+        margin-right: 2px;
         float: right;
         color: #fff;
         font-weight: bold;
         background: #bcbcbc;
         text-align: center;
         border: 1px solid #bbb;
-        border-radius: 4px;/*角丸*/
-        box-sizing: border-box;/*paddingとborderの要素の高さと幅の影響をなくす（要素に高さと幅を含める）*/
+        border-radius: 4px;
+        box-sizing: border-box;
     }
-
-    /* Sending Botton*/
     #bms_send_btn:hover {
         background: #138e5b;
-        cursor: pointer;
     }
 
-#clear_botton{
-    margin-bottom: 3em;
-    text-align: center;
-}
+#clear_btn {
+  text-align: center;
+  margin: 2em auto;
+  padding: 1.5em 2em;
+  color: white;
+  background: rgb(108, 192, 108); 
+  font-size: 12px;
+  font-weight: bolder;
+  border: none;
+  border-radius: 0.3em;
+  }
+  #clear_btn:hover {
+    background: #138e5b;
+  }
+

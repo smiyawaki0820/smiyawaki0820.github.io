@@ -1,0 +1,39 @@
+table {
+	border-collapse: collapse;
+	table-layout: fixed;
+	text-align: center;
+	margin: 0 auto;
+}
+thead, tbody {
+  display: block;
+  overflow: auto;
+  }
+  .thead {
+	background-color: #8a7f82;
+	color: white;
+	text-align: center;
+	width: 100%;
+	position: sticky;
+	font-weight: bold;
+	/*overflow: hidden;*/
+  }
+  table tbody {
+	/*overflow: auto;*/
+	text-align: center;
+	border: 1px solid rgb(221, 221, 221);
+	background-color: rgb(255, 251, 240);
+	width: 100%;
+  }
+  table th {
+	width: 20%;
+	height: 2em;
+	text-align: center;
+	border: solid 1px black;
+	position: sticky;
+  }
+  table td { 
+	width: 20%;
+	text-align: center;
+	border: solid 1px black;
+  }
+

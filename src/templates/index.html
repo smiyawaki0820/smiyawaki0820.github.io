@@ -5,674 +5,441 @@
   <head>
     <title>Shumpei Miyawaki</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../static/css/main.css">
-    <link rel="stylesheet" href="../static/css/chat.css">
+    <link rel="stylesheet" href="../static/css/main.css?q=42203">
+    <link rel="stylesheet" href="../static/css/chat.css?q=42203">
+    <link rel="stylesheet" href="../static/css/table.css?q=42553">
+    <link rel="stylesheet" href="../static/css/mail.css?q=42203">
+    <link rel="stylesheet" href="../static/css/poster.css?q=43253">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/javascript/ajax.js"></script>
   </head>
 
   <body>
-    <header class="header">
-      <div id="home">
-        <h1 id="title">MIYAWAKI SHUMPEI</h1>
+
+    <header>
+      <div class="area">
+        <h1>MIYAWAKI SHUMPEI</h1>
         <p>Tohoku University</p>
       </div>
-      <div class="right">
+      <div class="area right">
         <nav id="nav">     
           <ul class="nav_header">
-            <li class="nav_header"><a href="#link_about"><span class="">About</span></a></li>
-            <li class="nav_header"><a href="#link_project"><span class="">Project</span></a></li>
-            <li class="nav_header"><a href="#link_publications"><span class="">Publications</span></a></li>
-            <li class="nav_header"><a href="#link_contact"><span class="">Contact</span></a></li>
-            <!-- <li class="nav_header"><a href="/secret"><span class="">Developing</span></a></li>-->
+            <li class="nav_header"><a href="#sec_about">Profile</a></li>
+            <li class="nav_header"><a href="#sec_project">Project</a></li>
+            <li class="nav_header"><a href="#sec_publications">Publications</a></li>
+            <li class="nav_header"><a href="#sec_contact">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <br><br><br>
+    <div style="padding: 5em;"></div>
 
-    <!-- About -->
-    <div id="link_about"><br><br></div>
     <div>
-      <div class="div_headline">
-        <h1 class="headline"> About Me </h1>
-      </div>
-      <div class="context">
-        
-        <p class="padding_top1"><font size="">
-          I'm in the 1st year of a master's student at <a href="https://www.tohoku.ac.jp/japanese/">Tohoku University</a>,
-          and currently study "Natural Language Processing (NLP)" in <a href="https://www.nlp.ecei.tohoku.ac.jp/">Inui and Suzuki Lab</a>.<br />
-        </font></p>
-        
-        <div class="padding_top1 padding_left1"><font size="4">
-            <p class="padding_top0"><i class="fas fa-laptop-code my-small"></i><span class="padding_left1">python, Bash, C, html, R, Docker, GCP</span></p>
-            <p class="padding_top0"><i class="fas fa-running"></i><span class="padding_left1">soccer, volleyball, snowboarding, outdoors</span></p>
-            <p class="padding_top0"><i class="fab fa-spotify my-small"></i><span class="padding_left1">SEKAI NO OWARI, go!go!vanillas, LUCKY TAPES</span></p>
-        </font></div>
-        
-        <div class="padding_top2">
-          <h2>Research Interest</h2>
-          <ul class="padding_left2">
-            <li>Semantic Analysis</li>
-            <li>Question Answering</li>
-            <li>Dialogue System</li>
-            <li>Data Analysis</li>
-          </ul>
+      <!-- About -->
+      <div id="sec_about" class="box_section">
+        <div class="section">
+          <h1 class="title" style="padding: 0 1em;">Profile</h1>
+        </div>
+        <hr>
+
+        <div class="area">
+          <p>
+            I'm in the 1st year of a master's student at <a href="https://www.tohoku.ac.jp/japanese/">Tohoku University</a>,
+            and currently study "Natural Language Processing (NLP)" in <a href="https://www.nlp.ecei.tohoku.ac.jp/">Inui Lab</a>.
+            My research interests focus on <span class="bold">Semantic Analysis</span>, <span class="bold">Question Answering</span> and <span class="bold">Dialogue System</span>.
+          </p>
+          
+          <div style="area">
+            <ul style="list-style: none; font-size: small; padding-top: 1em;">
+              <li><i class="fas fa-laptop-code my-small"></i>　python, Bash, scala, Docker, C, html, R, GCP</li>
+              <li><i class="fas fa-running"></i>　soccer, volleyball, snowboarding, outdoors</li>
+              <li><i class="fab fa-spotify my-small"></i>　SEKAI NO OWARI, go!go!vanillas, LUCKY TAPES</li>
+            </ul>
+          </div>
         </div>
 
       </div>
-    </div>
 
-    
+      <!-- Project -->
+      <div id="sec_project" class="box_section">
+        <div class="section">
+          <h1 class="title" style="padding: 0 1em;">Projects</h1>
+        </div>
+        <hr>
 
-    <!-- Project -->
-    <div id="link_project"><br><br></div>
-    <div>
-      <div class="div_headline">
-        <h1 class="headline"> Projects </h1>
-      </div>
-
-      <div>  
-        <div class="sub_header">
-          <h2 class="padding_left1">対話システム構築</h2>
-          <div class="context">
-            <p class="padding_top1 padding_left1"><font size="4">
-              意味解析を取り入れた対話システムを構築します。
-		          固有表現抽出、述語項構造解析、感情分析などの意味解析を対話に取り入れ、より人間らしい対話を目指します。
-            </font></p>
+        <div id="project_qasrl" class="box_subsec">
+          <div class="area">
+            <div class="subsec">
+              <h2 class="title">QA 形式に基づく述語項構造データ収集</h2>
+            </div>
+            <div class="area">
+              <p>
+                述語項構造解析、特にゼロ照応を対象に、新たなデータ形式によるデータセットの作成を行う。新たなデータ形式として、自然言語ベースの QA 形式によるアノテーション方式を採用することで、専門家によらず誰でもアノテーションが可能となり、大規模なデータセットの収集が期待される。
+                例えば、「太郎 が 学校 に 行っ た 。」という文章に対して、「誰が学校に行った？太郎」のような質問と答えのペアを作成する。
+              </p>
+            </div>
           </div>
-          <br>
-          <h3 class="padding_left2">SLUD2020</h3>
-          <div class="context">
-            <p class="padding_top1 padding_left1"><font size="4">
-              <a href="https://jsai-slud.github.io/sig-slud/">人工知能学会 言語・音声理解と対話処理研究会 SIG-SLUD 2020</a> 「対話システムライブコンペティション3」のオープントラックに提出し，
-              我々が構築した対話システム「ILYS aoba bot」が NTT CS研 に次いで参加チーム中２位になりました．
-            </font></p>
-            <div class="padding_top2 padding_left2"><font size="3">
-              <ul>
-                <li><a href="https://github.com/cl-tohoku/ILYS-aoba-chatbot">Github: ILYS-aoba-chatbot</a></li>
-              </ul>
-            </font></div>
-            <p class="padding_top1 padding_left1"><font size="2">
-              本コンペティションのオープントラックは「自然，かつ，ユーザが話したい話題について情報交換が可能なシステムであるか」を競うものであるため，
-              システムが話題に即した自然な応答が可能であり，また話題に関する新たな情報を提供できることが可能なシステム構築を目的とし，
-              我々は話題に即した柔軟な応答が生成可能な系列変換器と，外部知識として Wikipedia の知識ベースを用いることで話題に関する新たな情報を含む応答が生成可能なルールベース応答を統合しました．
-            </font></p>
-          </div>
-          <br>
+        </div>
 
-          <div class="center" id="botname">
-            <p>🌱 ILYS aoba</p>
+        <div id="project_dialogue" class="box_subsec">
+          <div class="area">
+            <div class="subsec">
+              <h2 class="title">雑談対話応答システム構築</h2>
+            </div>
+            <div class="area">
+              <p>
+                研究室の有志で雑談型対話システムを構築しており、中でも、感情分析モジュールを担当しています。
+                ユーザの感情を分析し、より感情豊かで適切な応答生成を目指し、開発を行っています。
+              </p>
+            </div>
+            <div class="area">
+              <p style="font-size: small;">
+              2020 年下半期では、Twitter のリプライチェーンから、絵文字が付与された応答文を学習データとして抽出し、SLUD （下記詳細）で構築した対話モデル「ILYS aoba ボット」を Fine-tuning することで、四つの感情（喜怒哀楽）を制御した応答生成に取り組みました。
+              </p>
+            </div>
           </div>
 
-          <div id="ILYS_chatbot">
-            <div id="your_container" class="center">
-              <div id="bms_messages_container">
+          <div class="area">
+            <div class="subsec">
+              <h2 class="title">SLUD-2020</h2>
+            </div>
+            <div class="area">
+              <p>
+                研究室の７名で対話システムを構築し、<a href="https://dialog-system-live-competition.github.io/dslc3/result.html">人工知能学会 言語・音声理解と対話処理研究会 SIG-SLUD 2020</a> の対話コンペに参加しました。
+                我々が構築した「<a href="https://github.com/cl-tohoku/ILYS-aoba-chatbot">ILYS aoba ボット</a>」は、予選２位、本戦２位となる優秀賞を受賞しました。
+              </p>
+            </div>
+            <div class="area">
+              <p style="font-size: small;">
+                「自然、かつ、ユーザが話したい話題について情報交換が可能なシステム」の構築を目的とし、
+                話題に即した自然な応答が可能な系列変換器、
+                および話題に関する新たな情報を提供する知識ベースの応答モジュールを統合しました。
+                系列変換器には、3Bの Twitter リプライチェーンで事前学習を行い、対話破綻検出チャレンジのデータセットを含む 118K のデータセットで Fine-tuning を行った
+                Transformer (パラメータ数 ≒ 4.8B) を使用しました。
+                知識ベースの応答モジュールについては、キーワード抽出によるルールベースを使用し、
+                「東京タワーってどこにあるの？」といったキーワードに関する知識を尋ねる質問に対して、
+                「東京タワーは東京都港区芝公園にあります。日本の観光地として有名です。」のように、
+                適切な知識を埋め込んだ応答を生成します。
+                最終的な応答出力には、系列変換器から生成された応答文候補と、
+                知識ベースの応答モジュールから生成された応答文候補に対して、
+                様々な観点からスコア付けを行い、最終的な出力を決定します。
+                その他、詳細については<a href="https://jsai.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=10933&item_no=1&page_id=13&block_id=23">論文</a>または<a href="https://dialog-system-live-competition.github.io/dslc3/slides/O02_ILYS.pdf">発表スライド</a>を参照下さい。
+              </p>
+            </div>
+          </div>
+          
+          <!-- chatbot -->
+          <div id="bot-ilys" class="center area">
+            <div id="bot-name">
+              <h2 class="title">🌱 ILYS aoba</h2>
+            </div>
 
-                <!--<div id="bms_chat_header" class="center">
-                <div id="bms_status_icon">🌱</div>
-                <div id="bms_chat_user_name">ILYS aoba</div>
-                </div>-->
-
-                <div id="bms_messages" class="center">
-                  {% if outputs is not defined %}
-                  <div class="bms_message bms_left">
-                    <div class="bms_message_box">
-                      <div class="bms_message_content">
-                        <div class="bms_message_text">
-                          何か話しかけてください
+            <div id="ILYS_chatbot">
+              <div id="your_container" class="center">
+                <div id="bms_messages_container">
+                  <!-- message -->
+                  <div id="bms_messages" class="center">
+                    {% if outputs is not defined %}
+                    <div class="bms_message bms_left">
+                      <div class="bms_message_box">
+                        <div class="bms_message_content">
+                          <div class="bms_message_text">
+                            何か話しかけてください
+                          </div>
                         </div>
                       </div>
                     </div>
+                    <div class="bms_clear"></div>
+                    {% endif %}
                   </div>
-                  <div class="bms_clear"></div>
-                  {% endif %}
-                  {% for output in outputs %}
-                  {% if (loop.index0 % 2) == 0 %}
-                  <div class="bms_message bms_right">
-                    <div class="bms_message_box">
-                      <div class="bms_message_content">
-                        <div class="bms_message_text">
-                          {{output}}
-                        </div>
-                      </div>
-                    </div>
+                  <!-- button --> 
+                  <div id="bms_send" class="center">
+                    <form id="form" autocomplete="off">
+                      <input id="bms_send_message" type="text" placeholder="Message">
+                      <button id="bms_send_btn" type="submit" name="button">送信</button>
+                    </form>
                   </div>
-                  <div class="bms_clear"></div>
-                  {% elif (loop.index0 % 2) == 1 %}
-                  <div class="bms_message bms_left">
-                    <div class="bms_message_box">
-                      <div class="bms_message_content">
-                        <div class="bms_message_text">
-                          {{output}}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="bms_clear"></div>
-                  {% endif %}
-                  {% endfor %}
-                  <br><br>
                 </div>
-
-                <div id="bms_send" class="center">
-                  <form action="/interface" method="POST">
-                    <input id="bms_send_message" type="text" name="input_text" placeholder="Message">
-                    <input id="bms_send_btn" type="submit" value="送信">
-                  </form>
-                </div>
-
               </div>
             </div>
           </div>
-          
-        </div>
 
-        <!-- Clear -->
-        <br>
-        <div id="clear_botton" class="center">
-          <form action="/clear_history" method="post">
-            <input type="submit" value="クリア">
-          </form>
-        </div>
-        <br><br>
-
-        <div class="sub_header">
-          <h2 class="padding_left1">Efficient Open-Domain Question Answering</h2>
-          <div class="context">
-            <p class="padding_top1 padding_left1"><font size="4">
-              国際会議 <a href="https://nips.cc/Conferences/2020">NeurIPS 2020</a> で開催された QA Competition (<a href="https://efficientqa.github.io/">Efficient Open-Domain Question Answering</a>) に 
-              Studio Ousia さんと共同で開発させていただいた「Sōseki」で挑み，
-              Unrestrictedトラックで マイクロソフト社@MSFTResearch，フェイスブック社@facebookai に次いで参加チーム中3位、6GBトラックで参加チーム中2位になりました．
-            </font></p>
-            <p class="padding_top1 padding_left1"><font size="2">
-              In this competition contestants will develop a question answering system that contains all of the knowledge required to answer open-domain questions. 
-              There are no constraints on how the knowledge is stored—it could be in documents, databases, the parameters of a neural network, or any other form. 
-              However, three competition tracks encourage systems that store and access this knowledge using the smallest number of bytes, including code, corpora, and model parameters. 
-              There will also be an unconstrained track, in which the goal is to achieve the best possible question answering performance with no constraints. 
-              The best performing systems from each of the tracks will be put to test in a live competition against trivia experts during the NeurIPS 2020 competition track.
-            </font></p>
-            <br>
-            <div class="center"><font size="3">
-              <a href="https://efficientqa.github.io/unrestricted_leaderboard.html">Unrestricted Leaderboard</a>
-            </font></div>
-            <div style="height:200px; width:80%; max-width: 600px; overflow:auto; table-layout: fixed;" class="center"><font size="1">
-              <table border=1 style="width:100%; background-color:rgb(250, 250, 245); color:black;">
-                <tr style="background-color: #8a7f82; color: white;">
-                  <th>Model</th>
-                  <th>Participant</th>
-                  <th>Affiliation</th>
-                  <th>System size</th>
-                  <th>Accuracy</th>
-                </tr>
-                <!--<tbody style="width:100%;">-->
-                <tr>
-                  <td>UnitedQA</td>
-                  <td>Microsoft Research &amp; Dynamics 365 AI</td>
-                  <td>Microsoft Research &amp; Dynamics 365 AI</td>
-                  <td>--</td>
-                  <td>54.00</td>
-                </tr>
-                <tr>
-                  <td>Hybrid</td>
-                  <td>Facebook AI</td>
-                  <td>QA@FBAI</td>
-                  <td>--</td>
-                  <td>53.89</td>
-                </tr>
-                <tr>
-                  <td>Model 2</td>
-                  <td>FAIR-Paris&amp;London</td>
-                  <td>Facebook</td>
-                  <td>5.85 GiB</td>
-                  <td>53.33</td>
-                </tr>
-                <tr>
-                  <td>Model 1</td>
-                  <td>FAIR-Paris&amp;London</td>
-                  <td>Facebook</td>
-                  <td>5.66 GiB</td>
-                  <td>52.78</td>
-                </tr>
-                <tr>
-                  <td>soseki</td>
-                  <td>ousia_tohoku</td>
-                  <td>Studio Ousia &amp; Tohoku University</td>
-                  <td>--</td>
-                  <td>52.44</td>
-                </tr>
-                <tr>
-                  <td>R2D2_v2_full</td>
-                  <td>KNOT@FIT</td>
-                  <td>Brno University of Technology</td>
-                  <td>*66 GiB</td>
-                  <td>50.33</td>
-                </tr>
-                <tr>
-                  <td>Soseki</td>
-                  <td>ousia_tohoku</td>
-                  <td>Studio Ousia &amp; Tohoku University</td>
-                  <td>5.63 GiB</td>
-                  <td>50.17</td>
-                </tr>
-                <tr>
-                  <td>Soseki</td>
-                  <td>ousia_tohoku</td>
-                  <td>Studio Ousia &amp; Tohoku University</td>
-                  <td>4.86 GiB</td>
-                  <td>50.11</td>
-                </tr>
-                <tr>
-                  <td>Soseki</td>
-                  <td>ousia_tohoku</td>
-                  <td>Studio Ousia &amp; Tohoku University</td>
-                  <td>5.37 GiB</td>
-                  <td>49.39</td>
-                </tr>
-                <tr>
-                  <td> </td>
-                  <td>Noah_NLP</td>
-                  <td>Huawei Noah’s Ark Lab</td>
-                  <td>--</td>
-                  <td>48.06</td>
-                </tr>
-                <tr>
-                  <td> </td>
-                  <td>Noah_NLP</td>
-                  <td>Huawei Noah’s Ark Lab</td>
-                  <td>--</td>
-                  <td>47.61</td>
-                </tr>
-                <tr>
-                  <td>R2D2_v2</td>
-                  <td>KNOT@FIT</td>
-                  <td>Brno University of Technology</td>
-                  <td>5.95 GiB</td>
-                  <td>47.28</td>
-                </tr>
-                <tr>
-                  <td> </td>
-                  <td> </td>
-                  <td>Salesforce</td>
-                  <td>--</td>
-                  <td>46.83</td>
-                </tr>
-                <tr>
-                  <td>R2D2</td>
-                  <td>KNOT@FIT</td>
-                  <td>Brno University of Technology</td>
-                  <td>5.38 GiB</td>
-                  <td>46.06</td>
-                </tr>
-                <tr>
-                  <td> </td>
-                  <td> </td>
-                  <td>Salesforce</td>
-                  <td>*5.7 GiB</td>
-                  <td>45.83</td>
-                </tr>
-                <tr>
-                  <td>CDPR-FID</td>
-                  <td>BearQA</td>
-                  <td>UC Berkley</td>
-                  <td>--</td>
-                  <td>40.83</td>
-                </tr>
-                <tr>
-                  <td>R1D1</td>
-                  <td>KNOT@FIT</td>
-                  <td>Brno University of Technology</td>
-                  <td>5.29 GiB</td>
-                  <td>40.56</td>
-                </tr>
-                <tr>
-                  <td>uclnlp-fair-efficientqa-xlg</td>
-                  <td>uclnlp-efficientqa</td>
-                  <td>University College London and Facebook AI Research</td>
-                  <td>*1.16GiB</td>
-                  <td>39.11</td>
-                </tr>
-                <tr>
-                  <td>DPR model serving using Vespa.ai</td>
-                  <td>Vespa Team</td>
-                  <td>Vespa.ai</td>
-                  <td>--</td>
-                  <td>35.00</td>
-                </tr>
-                <tr>
-                  <td>REALM</td>
-                  <td>Orgainizers</td>
-                  <td>EfficientQA</td>
-                  <td>27.19 GiB</td>
-                  <td>34.89</td>
-                </tr>
-                <tr>
-                  <td>uclnlp-fair-efficientqa-lg</td>
-                  <td>uclnlp-efficientqa</td>
-                  <td>University College London and Facebook AI Research</td>
-                  <td>336.23 MiB</td>
-                  <td>33.44</td>
-                </tr>
-                <tr>
-                  <td>RDR-500MB</td>
-                  <td>naver-clova-parsing</td>
-                  <td>Naver Clova</td>
-                  <td>484.69 MiB</td>
-                  <td>32.06</td>
-                </tr>
-                <tr>
-                  <td>RDR-6GB</td>
-                  <td>naver-clova-parsing</td>
-                  <td>Naver Clova</td>
-                  <td>5.78 GiB</td>
-                  <td>32.06</td>
-                </tr>
-                <tr>
-                  <td>EFF-Large</td>
-                  <td>Beauty-P</td>
-                  <td>PA Tech</td>
-                  <td>--</td>
-                  <td>31.11</td>
-                </tr>
-                <tr>
-                  <td>ba45-micro</td>
-                  <td>BA45</td>
-                  <td>BA45</td>
-                  <td>5.57 GiB</td>
-                  <td>31.11</td>
-                </tr>
-                <tr>
-                  <td>ba45-micro</td>
-                  <td>BA45</td>
-                  <td>BA45</td>
-                  <td>5.53 GiB</td>
-                  <td>29.97</td>
-                </tr>
-                <tr>
-                  <td>uclnlp-fair-efficientqa-lg</td>
-                  <td>uclnlp-efficientqa</td>
-                  <td>University College London and Facebook AI Research</td>
-                  <td>226.09 MiB</td>
-                  <td>29.44</td>
-                </tr>
-                <tr>
-                  <td>ba45-micro</td>
-                  <td>BA45</td>
-                  <td>BA45</td>
-                  <td>5.33 GiB</td>
-                  <td>28.83</td>
-                </tr>
-                <tr>
-                  <td>RDR-500MB</td>
-                  <td>naver-clova-parsing</td>
-                  <td>Naver Clova</td>
-                  <td>496.99 MiB</td>
-                  <td>28.22</td>
-                </tr>
-                <tr>
-                  <td>T5-1.1-XL + SSM</td>
-                  <td>Organizers</td>
-                  <td>EfficientQA</td>
-                  <td>5.65 GiB</td>
-                  <td>27.89</td>
-                </tr>
-                <tr>
-                  <td>EFF-Small</td>
-                  <td>Beauty-P</td>
-                  <td>PA Tech</td>
-                  <td>--</td>
-                  <td>27.89</td>
-                </tr>
-                <tr>
-                  <td>NTUSTTTTT</td>
-                  <td>Jia-Zhi_Guo</td>
-                  <td>National Taiwan University of Science and Technology</td>
-                  <td>5.65 GiB</td>
-                  <td>27.17</td>
-                </tr>
-                <tr>
-                  <td>uclnlp-fair-efficientqa</td>
-                  <td>uclnlp-efficientqa</td>
-                  <td>University College London and Facebook AI Research</td>
-                  <td>29.43 MiB</td>
-                  <td>26.78</td>
-                </tr>
-                <tr>
-                  <td>uclnlp-fair-efficientqa</td>
-                  <td>uclnlp-efficientqa</td>
-                  <td>University College London and Facebook AI Research</td>
-                  <td>157.26 MiB</td>
-                  <td>25.78</td>
-                </tr>
-                <tr>
-                  <td>uclnlp-fair-efficientqa</td>
-                  <td>uclnlp-efficientqa</td>
-                  <td>University College London and Facebook AI Research</td>
-                  <td>5.87 GiB</td>
-                  <td>25.78</td>
-                </tr>
-                <tr>
-                  <td>hsjdpr</td>
-                  <td>LSLL</td>
-                  <td>LSLL</td>
-                  <td>13.97 GiB</td>
-                  <td>25.61</td>
-                </tr>
-                <tr>
-                  <td>aqa-udm</td>
-                  <td>AQA-UDM</td>
-                  <td>University of Montreal</td>
-                  <td>14.17 GiB</td>
-                  <td>25.22</td>
-                </tr>
-                <tr>
-                  <td>uclnlp-fair-efficientqa</td>
-                  <td>uclnlp-efficientqa</td>
-                  <td>University College London and Facebook AI Research</td>
-                  <td>28.61 MiB</td>
-                  <td>24.83</td>
-                </tr>
-                <tr>
-                  <td>ssm_nq_torch</td>
-                  <td>machnev</td>
-                  <td>Higher School of Economics</td>
-                  <td>3.02 GiB</td>
-                  <td>20.11</td>
-                </tr>
-                <tr>
-                  <td>FRY-T</td>
-                  <td>FRY</td>
-                  <td>FRY</td>
-                  <td>423.29 MiB</td>
-                  <td>19.39</td>
-                </tr>
-                <tr>
-                  <td>NTUSttttt</td>
-                  <td>Chia-Chih_Kuo</td>
-                  <td>National Taiwan University of Science and Technology</td>
-                  <td>488.96 MiB</td>
-                  <td>18.39</td>
-                </tr>
-                <tr>
-                  <td>T5-1.1-small + SSM</td>
-                  <td>Organizers</td>
-                  <td>EfficientQA</td>
-                  <td>486.61 MiB</td>
-                  <td>17.61</td>
-                </tr>
-                <!--</tbody>-->
-              </table>
+          <!-- clear -->
+          <div style="text-align: center; margin: 0 auto;">
+            <div class="area">
+              <form action="/clear_history" method="post">
+                <button id="clear_btn" type="submit">クリア</button>
+              </form>
             </div>
           </div>
-        </font></div>
 
-        <div class="sub_header">
-          <h2 class="padding_left1">AI王 ~クイズAI日本一決定戦</h2>
-          <div class="context">
-            <p class="padding_top1 padding_left1"><font size="4">
-              <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.anlp.jp%2Fnlp2021%2F&sa=D&sntz=1&usg=AFQjCNGD2W7LOYvscMWhqAIBs1LY-3GcXw">言語処理学会第27回年次大会（NLP2021）</a> のワークショップの一つとして開催される，
-              クイズを題材とした日本語質問応答システムのコンペティションのオーガナイザの一人として参加させていただいております．
-            </font></p>
-            <div class="padding_top2 padding_left2"><font size="3">
-              <ul>
-                <li><a href="https://sites.google.com/view/nlp2021-aio/">NLP2021 ワークショップ2</a></li>
-                <li>(コンペ詳細) <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.nlp.ecei.tohoku.ac.jp%2Fprojects%2Faio%2F&sa=D&sntz=1&usg=AFQjCNHgItkH1hW1eF-nd8POAsPbSdQiIg">AI王 〜クイズAI日本一決定戦〜</a></li>
-                <li><a href="https://www.google.com/url?q=https%3A%2F%2Fwww.nlp.ecei.tohoku.ac.jp%2Fprojects%2FAIP-LB%2Ftask%2Faio&sa=D&sntz=1&usg=AFQjCNEejZtaN1NaARzFmKgAA9MNgAw_dA">リーダーボード</a></li>
-                <li><a href="https://twitter.com/AioJaqket"> Twitter </a></li>
+        </div>
+
+
+        <div id="project_efqa" class="box_subsec">
+          <div class="area">
+            <div class="subsec">
+              <h2 class="title">Efficient Open-Domain Question Answering</h2>
+            </div>
+            <div class="area">
+              <p>
+                国際会議 <a href="https://nips.cc/Conferences/2020">NeurIPS 2020</a> で開催された
+                QA コンペ「<a href="https://efficientqa.github.io/">Efficient Open-Domain Question Answering (Efficient QA)</a>」 に 
+                株式会社 Studio Ousia さんと共同で開発させていただいた「<a href="http://soseki.ai/">Sōseki</a>」で挑み、
+                <a href="https://efficientqa.github.io/unrestricted_leaderboard.html">unrestricted track contestants</a> で第三位、
+                system under 6GB track contestants で準優勝の成績を収めました。
+              </p>
+            </div>
+            <div class="area">
+              <p style="font-size: small;">
+                任意のファクトイド型の質問に対して、選択肢のような参照する知識源を特に規定しない「オープンドメイン QA タスク」では、一般に以下のような解法が用いられる：
+                (1) 大規模な文書集合から質問に関連する文書を検索モジュール (retriever) が抽出し、
+                (2) 抽出された関連文書から読解モジュール (reader/generator) が、質問の解答を推定する。
+                我々は、retriever に <a href="https://arxiv.org/abs/2004.04906">Dense Passage Retriever (DPR)</a> 、reader (抽出型読解システム) に ELECTRA 、generator (生成型読解システム) に T5 を用いて、最終的にアンサンブルを行いました。
+                その他詳細については、以下の資料や<a href="https://arxiv.org/abs/2101.00133">論文</a>を参照下さい。
+              </p>
+              <p style="font-size: small; padding-top: 1em;">
+              - 言語処理学会2020 ワークショップ「AI王 ~クイズAI日本一決定戦」にて、「<a href="https://speakerdeck.com/ikuyamada/opundomeinzhi-wen-ying-da-ji-shu-falsezui-xin-dong-xiang">オープンドメイン質問応答技術の最新動向</a>」と題して、山田育矢様（株式会社 Studio Ousia）による招待講演が開催されました。
+              Efficient QA で取り組んだシステムの紹介や、オープンドメイン QA の最新動向について解説されています。
+              </p>
+            </div>
+          </div>
+
+          <div class="area center" style="padding-bottom: 1em;">
+            <iframe src="../static/html/efqa_table.html" width="80%"></iframe>
+          </div>
+        </div>
+
+        <div id="project_aio" class="box_subsec">
+          <div class="area">
+            <div class="subsec">
+              <h2 class="title">言語処理学会ワークショップ: AI王 ~クイズAI日本一決定戦</h2>
+            </div>
+            <div class="area">
+              <p>
+                <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.anlp.jp%2Fnlp2021%2F&sa=D&sntz=1&usg=AFQjCNGD2W7LOYvscMWhqAIBs1LY-3GcXw">言語処理学会第27回年次大会（NLP2021）</a> のワークショップの一つとして開催される、
+                クイズを題材とした日本語QAデータセットJAQKETを使った、
+                QAコンペのオーガナイザとして参加しました。
+                コンペティション当日は、機械読解や質問応答の第一人者や、クイズ作家による招待講演や、本コンペに参加した 11 チームによるシステム報告と、おかげさまで非常に盛り上がることができました。
+                来年以降の開催状況については、<a href="https://www.google.com/url?q=https%3A%2F%2Fwww.nlp.ecei.tohoku.ac.jp%2Fprojects%2Faio%2F&sa=D&sntz=1&usg=AFQjCNHgItkH1hW1eF-nd8POAsPbSdQiIg">コンペティション概要ページ</a>にて、情報を更新していきます。
+              </p>
+            </div>
+            <div class="area">
+              <ul style="padding: 0 2em;">
+                <li><a href="https://sites.google.com/view/nlp2021-aio/">ワークショップページ</a></li>
+                <li><a href="https://www.google.com/url?q=https%3A%2F%2Fwww.nlp.ecei.tohoku.ac.jp%2Fprojects%2Faio%2F&sa=D&sntz=1&usg=AFQjCNHgItkH1hW1eF-nd8POAsPbSdQiIg">コンペティション概要</a></li>
+                <li><a href="https://twitter.com/AioJaqket">Twitter</a></li>
               </ul>
-            </font></div>
-            <p class="padding_top1 padding_left1"><font size="2">
-              知識に基づいた質問応答システムの実現は，自然言語処理の大きなゴールの一つです．
-              しかしながら，その実現や評価のためのデータセットの多くは英語に限られています．
-              本ワークショップでは，クイズを題材とした日本語QAデータセットJAQKETを使って，日本語質問応答システムのコンペティションを開催します．
-              具体的には，事前にシステムを構築して持ち寄っていただき，その場で勝者を決定するライブコンペを行います．
-              また，各チームによるシステム報告を行っていただきます．
-              機械読解や質問応答の第一人者による最新の研究動向の解説や，クイズ作家を招いてご講演いただく企画も予定しています．
-            </font></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Publications -->
+      <div id="sec_publications" class="box_section">
+        <div class="section">
+          <h1 class="title" style="padding: 0 1em;">Publications</h1>
+        </div>
+        <hr>
+
+        <div id="papers" class="box_subsec">
+          <div class="area">
+            <div class="subsec">
+              <h2 class="title">Papers</h2>
+            </div>
+            <div class="area">
+              <ul style="padding: 0 2em;">
+                <li>
+                  <p class="paper"><a href="https://www.anlp.jp/nlp2021/program_online/pdf_dir/P7-15.pdf">オープンドメインQAにおけるDPRの有効性検証</a></p>
+                  <div class="paper_info">
+                    <p>*加藤拓真, *宮脇峻平, 西田京介, 鈴木潤 (*の貢献は同等である)</p>
+                    <p>言語処理学会 第27回 年次大会 (NLP2021)</p>
+                  </div>
+                </li>
+                <li>
+                  <p class="paper"><a href="https://arxiv.org/abs/2101.00133">NeurIPS 2020 EfficientQA Competition: Systems, Analyses and Lessons Learned</a></p>
+                  <div class="paper_info">
+                    <p><span style="font-weight: bold;">Our Team: </span>Ikuya Yamada, Sonse Shimaoka, Masatoshi Suzuki, Shumpei Miyawaki, Shun Sato, Ryo Takahashi, Jun Suzuki</p>
+                    <p>Neural Information Processing Systems (NeurIPS2020)</p>
+                  </div>
+                </li>
+                <li>
+                  <p class="paper"><a href="https://jsai.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=10933&item_no=1&page_id=13&block_id=23">ILYS aoba bot:大規模ニューラル応答生成モデルとルールベースを統合した雑談対話システム</a></p>
+                  <div class="paper_info">
+                    <p>藤原吏生, 岸波洋介, 今野颯人, 佐藤志貴, 佐藤汰亮, 宮脇峻平, 加藤拓真, 鈴木潤, 乾健太郎</p>
+                    <p>人工知能学会 第90回言語・音声理解と対話処理研究会 (SLUD2020)</p>
+                  </div>
+                </li>
+                <li>
+                  <p class="paper"><a href="https://www.aclweb.org/anthology/2020.acl-srw.30/">Embeddings of Label Components for Sequence Labeling: A Case Study of Fine-grained Named Entity Recognition</a></p>
+                  <div class="paper_info">
+                    <p>Takuma Kato, Kaori Abe, Hiroki Ouchi, Shumpei Miyawaki, Jun Suzuki, Kentaro Inui</p>
+                    <p>Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics: Student Research Workshop (ACL-SRW2020)</p>
+                  </div>
+                </li>
+                <li>
+                  <p class="paper"><a href="https://www.anlp.jp/proceedings/annual_meeting/2020/pdf_dir/C5-2.pdf">反復改良法を用いた日本語述語項構造解析</a></p>
+                  <div class="paper_info">
+                    <p>宮脇峻平、清野舜、松林優一郎、今野颯人、高橋諒、大内啓樹、乾健太郎</p>
+                    <p>言語処理学会 第26回 年次大会 (NLP2020)</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="posters" class="box_subsec">
+          <div class="subsec area" style="padding-bottom: 2em;">
+            <h2 class="title">Posters</h2>
+          </div>
+
+          <div class="area">
+            <ul class="list_poster">
+
+              <li class="item">
+                <div class="poster">
+                  <a href="https://www.anlp.jp/nlp2021/program_online/pdf_dir/P7-15.pdf" style="color:white;">
+                    <img src="/static/img/nlp2021_poster.png">
+                    <div class="mask">
+                      <div class="poster_info">
+                        <div class="area">
+                          オープンドメインQAにおける<br>
+                          DPR の有効性検証
+                        </div>
+                        <div class="area">
+                          加藤拓真*，宮脇峻平*，西田京介，鈴木潤<br>
+                          (* の貢献は同等である)
+                        </div>
+                        <div class="area">
+                          言語処理学会 第27回（NLP 2021）
+                        </div>
+                      </div>
+                     </div>
+                  </a>
+                </div>
+              </li>
+
+              <li class="item">
+                <div class="poster">
+                  <a href="https://drive.google.com/file/d/1xX-JabYTNXaogSgIJKV6slYz4AHau44B/view?usp=sharing" style="color:white;">
+                    <img src="/static/img/yans20_miya.png">
+                    <div class="mask">
+                      <div class="poster_info">
+                        <div class="area">
+                          QA-SRLとのマルチタスク学習による<br>
+                          意味役割付与のデータ拡張
+                        </div>
+                        <div class="area">
+                          宮脇峻平、清野舜、松林優一郎、<br>
+                          今野颯人、乾健太郎
+                        </div>
+                        <div class="area">
+                          NLP若手の会 第15回（YANS 2020）
+                        </div>
+                      </div>
+                     </div>
+                  </a>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+
+          <div class="area">
+            <ul class="list_poster">
+
+              <li class="item">
+                <div class="poster">
+                  <a href="https://drive.google.com/open?id=1Sg3vIrE_kxbyBGAR-4UCj3ii3keyK_EM" style="color:white;">
+                    <img src="/static/img/yans19_miya.png">
+                    <div class="mask">
+                      <div class="poster_info">
+                        <div class="area">
+                          日本語述語項構造解析のための<br>
+                          自己回帰モデル
+                        </div>
+                        <div class="area">
+                          宮脇峻平、加藤拓真、今野颯人、大内啓樹、<br>
+                          清野舜、松林優一郎、高橋諒、乾健太郎
+                        </div>
+                        <div class="area">
+                          NLP若手の会 第14回（YANS 2019）
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </li>
+
+              <li class="item">
+                <div class="poster">
+                  <a href="https://drive.google.com/open?id=1v_ncTr7w3RoCmHvaAx2SR-dlZJeB86iP" style="color:white;">
+                    <img src="/static/img/yans19_kato.png">
+                    <div class="mask">
+                      <div class="poster_info">
+                        <div class="area">
+                          単語ベース及び文字ベースモデルの<br>
+                          固有表現抽出の性能比較
+                        </div>
+                        <div class="area">
+                          加藤拓真、宮脇峻平、阿部香央莉、<br>
+                          大内啓樹、鈴木潤、乾健太郎
+                        </div>
+                        <div class="area">
+                          NLP若手の会 第14回（YANS 2019）
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </li>
+
+            </ul>
           </div>
         </div>
 
       </div>
     </div>
-
-    <!-- Publications -->
-    <div id="link_publications"><br><br></div>
-    <div class="publications">
-      <div class="div_headline">
-        <h1 class="headline"> Publications </h1>
-      </div>
-
-      <div class="sub_header">
-        <h2 class="padding_left1">Papers</h2>
-        <div class="context">
-          <ul class="padding_left2">
-            <li class="padding_top1"><font size="5"><a href="https://www.anlp.jp/proceedings/annual_meeting/2020/pdf_dir/C5-2.pdf">反復改良法を用いた日本語述語項構造解析</a></font></li>
-              <div class="padding_left1 padding_top0"><font size="3">
-                <p>宮脇峻平，清野舜，松林優一郎，今野颯人，高橋諒，大内啓樹，乾健太郎</p>
-                <p>言語処理学会 第26回 年次大会 (NLP2020)</p>
-              </font></div>
-            <li class="padding_top1"><font size="5"><a href="https://www.aclweb.org/anthology/2020.acl-srw.30/">Embeddings of Label Components for Sequence Labeling: A Case Study of Fine-grained Named Entity Recognition</a></font></li>
-              <div class="padding_left1 padding_top0"><font size="3">
-                <p>Takuma Kato, Kaori Abe, Hiroki Ouchi, Shumpei Miyawaki, Jun Suzuki, Kentaro Inui</p>
-                <p>Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics: Student Research Workshop (ACL-SRW2020)</p>
-              </font></div>
-            <li class="padding_top1"><font size="5"><a href="#">ILYS aoba bot:大規模ニューラル応答生成モデルとルールベースを統合した雑談対話システム</a></font></li>
-              <div class="padding_left1 padding_top0"><font size="3">
-                <p>藤原吏生, 岸波洋介, 今野颯人, 佐藤志貴, 佐藤汰亮, 宮脇峻平, 加藤拓真, 鈴木潤, 乾健太郎</p>
-                <p>人工知能学会 第90回言語・音声理解と対話処理研究会 (SLUD2020)</p>
-              </font></div>
-          </ul>
-        </div>
-      </div>
-
-      <div class="sub_header">
-        <h2 class="padding_left1">Posters</h2>
-        <ul class="horizontal-list padding_left1">
-
-          <li class="item">
-            <div class="poster poster3">
-              <a href="https://drive.google.com/file/d/1xX-JabYTNXaogSgIJKV6slYz4AHau44B/view?usp=sharing">
-                <img src="/static/img/yans20_miya.png">
-                <div class="mask">
-                  <div class="caption">
-                    <div><font size="4">
-                      <p>QA-SRLとのマルチタスク学習による</p>
-                      <p>意味役割付与のデータ拡張</p>
-                    </font></p>
-                    <div class="padding_top0"><font size="3">
-                      <p>宮脇峻平，清野舜，松林優一郎，</p>
-                      <p>今野颯人，乾健太郎</p>
-                    </font></div>
-                    <p class="padding_top1"><font size="3">NLP若手の会 第15回(YANS 2020)</font></p>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </li>
-
-          <li class="item">
-            <div class="poster poster1">
-              <a href="https://drive.google.com/open?id=1Sg3vIrE_kxbyBGAR-4UCj3ii3keyK_EM">
-                <img src="/static/img/yans19_miya.png">
-                <div class="mask">
-                  <div class="caption">
-                    <div><font size="4">
-                      <p>日本語述語項構造解析</p>
-                      <p>のための自己回帰モデル</p>
-                    </font></div>
-                    <div class="padding_top0"><font size="3">
-                      <p>宮脇峻平，加藤拓真，今野颯人，大内啓樹，</p>
-                      <p>清野舜，松林優一郎，高橋諒，乾健太郎</p>
-                    </font></div>
-                    <p class="padding_top1"><font size="3">NLP若手の会 第14回(YANS 2019)</font></p>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </li>
-          
-          <li class="item">
-            <div class="poster poster2">
-              <a href="https://drive.google.com/open?id=1v_ncTr7w3RoCmHvaAx2SR-dlZJeB86iP">
-                <img src="/static/img/yans19_kato.png">
-                <div class="mask">
-                  <div class="caption">
-                    <div><font size="4">
-                      <p>単語ベース及び文字ベースモデルの</p>
-                      <p>固有表現抽出の性能比較</p>
-                    </font></p>
-                    <div class="padding_top0"><font size="3">
-                      <p>加藤拓真，宮脇峻平，阿部香央莉，</p>
-                      <p>大内啓樹，鈴木潤，乾健太郎</p>
-                    </font></div>
-                    <p class="padding_top1"><font size="3">NLP若手の会 第14回(YANS 2019)</font></p>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </li>
-          
-        </ul>
-      </div>
-
-    </div>
-
-
 
     <!-- Contact -->
-    <div id="link_contact"><br><br></div>
-    <div class="contact">
-      <div class="div_headline">
-        <h1 class="headline"> Contact </h1>
+    <div id="sec_contact" class="box_section">
+      <div class="section">
+        <h1 class="title" style="padding: 0 1em;">Contact</h1>
       </div>
-      <div class="mail_form">
-        <form method="post" action="mailto:miyawaki.shumpei@ecei.tohoku.ac.jp" enctype="text/plain" target="_blank" onsubmit="try {return window.confirm(&quot;セキュリティ上の制限から、このフォームは正しく機能しない可能性があります。\n続行しますか？&quot;);} catch (e) {return false;}">
-          <p class="padding_top0">E-mail</p>
-          <input type="email" name="EM" maxlength="50">
+      <hr>
 
-          <p class="padding_top0">Title</p>
-          <input type="text" name="TX" maxlength="50">
-
-          <p class="padding_top1">Main Message</p>
-          <textarea cols="69" rows="6" name="TA"></textarea><br>
-
-          <input type="submit" name="SB" value="submit" class="submit">
-          <input type="reset" name="RB" value="clear" class="reset">
-        </form>
+      <div class="center area">
+        <div class="block_contact">
+          <form method="post" action="mailto:miyawaki.shumpei@ecei.tohoku.ac.jp" enctype="text/plain" target="_blank" onsubmit="try {return window.confirm(&quot;セキュリティ上の制限から、このフォームは正しく機能しない可能性があります。\n続行しますか？&quot;);} catch (e) {return false;}">
+            <div class="area_contact">
+              <input type="email" placeholder="Email" autocomplete="off" style="width: 99.5%; margin: 0.2em 0;">
+              <input type="text" placeholder="Title" autocomplete="off" style="width: 99.5%; margin: 0.2em 0;">
+              <div style="margin: 0.3em 0;">
+                <textarea cols="69" rows="8" placeholder="Message" autocomplete="off" style="width: 100%;"></textarea>
+              </div>
+            </div>
+            <input id="submit_btn" type="submit" value="submit">
+          </form>
+        </div>
       </div>
     </div>
 
-    <div class="footer center">
-      <div class="padding_top1">
+    <!-- footer -->
+    <div class="footer">
+      <div class="area">
         <p>If you require any further help, please do not hesitate to contact me</p>
         <p>miyawaki.shumpei@ecei.tohoku.ac.jp</p>  
       </div>
-      <div class="center padding_top1">
+      <div>
         <ul class="icons horizontal">
-          <li class="padding_both"><a href="https://twitter.com/catshun_" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-          <li class="padding_both"><a href="https://www.facebook.com/shumpei.miyawaki?ref=bookmarks" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-          <li class="padding_both"><a href="https://github.com/smiyawaki0820" class="icon brands fa-github"><span class="label">Github</span></a></li>
-          <li class="padding_both"><a href="https://www.instagram.com/shumpeimiyawaki/?hl=ja" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+          <li><a href="https://twitter.com/catshun_" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+          <li><a href="https://www.facebook.com/shumpei.miyawaki?ref=bookmarks" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+          <li><a href="https://github.com/smiyawaki0820" class="icon brands fa-github"><span class="label">Github</span></a></li>
+          <li><a href="https://www.instagram.com/shumpeimiyawaki/?hl=ja" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
         </ul>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import os
 from os import path
 import sys
+import json
 import logging
 import argparse
 from typing import List
@@ -10,7 +11,7 @@ from datetime import datetime
 
 import csv
 import sqlite3
-from flask import Flask, render_template, request, session, redirect, url_for
+from flask import Flask, render_template, request, session, redirect, url_for, jsonify
 
 from src.create_db import TableInstance, db_session
 
@@ -25,7 +26,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 app = Flask(__name__)
 
-ROOT = '/Users/miyawaki_shumpei/smiyawaki0820.github.io'
+#ROOT = '/Users/miyawaki_shumpei/smiyawaki0820.github.io'
+ROOT = '/work02/miyawaki/smiyawaki0820.github.io'
 
 # Model ==========================================
 
@@ -62,25 +64,39 @@ model.clear()
 
 # ================================================
 
+@app.context_processor
+def override_url_for():
+    return dict(url_for=dated_url_for)
 
-@app.route("/")
-@app.route("/index") #「/index」へアクセスがあった場合に、「index.html」を返す
+def dated_url_for(endpoint, **values):
+    if endpoint == 'static':
+        filename = values.get('filename', None)
+        if filename:
+            file_path = os.path.join(app.root_path, endpoint, filename)
+            values['q'] = int(os.stat(file_path).st_mtime)
+    return url_for(endpoint, **values)
+
+@app.route("/", methods=["GET", "POST"])
 def index():
-    """ in .html
-    {{name}}    # var
-    {% if hoge == fuga %} ... {% endif %}
-    {% for k in iter %} ... {% endfor %}
-    """
+    logger.info('\033[34m' + f'| index ... {request.method}' + '\033[0m')
+    if request.method == "POST":
+        input_text = request.form["bms_send_message"]
+        logger.info(f'GET | {input_text}')
+        try:
+            outputs: list = model.predict(input_text)
+        except:
+            outputs = []
+        assert len(outputs)%2 == 0
+        dic = [
+            dict(id=i/2, input=outputs[i], output=outputs[i+1])
+            for i in range(0, len(outputs), 2)
+        ]
+        return jsonify(dic)
+    
     name = request.args.get("name")         # query_string から値を受け取る
-    table_data = TableInstance.query.all()  # sqlite3 content.db
-    return render_template("index.html", name=name, table_data=table_data) # **kwargs 形式
-
-
-@app.route("/index",methods=["post"])
-def post():
-    name = request.form["name"]
-    table_data = TableInstance.query.all()
-    return render_template("index.html", name=name, table_data=table_data)
+    #table_data = TableInstance.query.all()  # sqlite3 content.db
+    #return render_template("index.html", name=name, table_data=table_data) # **kwargs 形式
+    return render_template("index.html", name=name) # **kwargs 形式
 
 
 @app.route('/add',methods=['post'])
@@ -128,8 +144,9 @@ def to_csv():
         state = 'FALSE'
     return render_template("index.html", fo_csv=fo_csv, state=state)
 
-@app.route("/interface",methods=["post"])
+@app.route("/interface", methods=["post"])
 def interface():
+    """
     try:
         input_text = request.form["input_text"]
         logger.info(f'GET | {input_text}')
@@ -138,8 +155,17 @@ def interface():
     except:
         outputs=[]
         state = 'FALSE'
-    id = request.args.get('id')
-    return render_template("index.html", id=id, outputs=outputs, state_interface=state)
+    """
+    #id = request.args.get('id')
+    #return render_template("index.html", id=id, outputs=outputs, state_interface=state)
+    
+    text_in = request.form["input_text"]
+    logger.info(f'input_text ... {text_in}')
+    dict = {
+        "input": text_in,
+        "outputs": " ".join([text_in, "hogehoge"])
+    }
+    return jsonify(values=json.dumps(dict, ensure_ascii=False))
 
 @app.route('/clear_history',methods=['post'])
 def clear_history():
